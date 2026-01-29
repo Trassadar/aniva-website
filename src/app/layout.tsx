@@ -2,6 +2,7 @@ import "./globals.css";
 import FloatingContactButtons from "@/components/FloatingContactButtons";
 import { generateMetadata as genMeta } from "@/lib/seo";
 import { generateStructuredData } from "@/lib/seo";
+import Script from "next/script";
 
 export const metadata = genMeta({
   title: "ANIVA - Spalatorie Covoare Brasov | Ridicare si Livrare Gratuita",
@@ -18,6 +19,20 @@ export default function RootLayout({
 
   return (
     <html lang="ro">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16827353580"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16827353580');
+          `}
+        </Script>
+      </head>
       <body>
         <script
           type="application/ld+json"
