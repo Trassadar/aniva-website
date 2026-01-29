@@ -1,5 +1,6 @@
 'use client';
 
+import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
@@ -67,7 +68,7 @@ export default function Comanda() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError('');
-    
+
     if (!validateForm()) {
       return;
     }
@@ -101,8 +102,8 @@ export default function Comanda() {
       });
 
       const text = await response.text();
-      let result;
-      
+      let result: any;
+
       try {
         result = JSON.parse(text);
       } catch {
@@ -113,7 +114,7 @@ export default function Comanda() {
       if (response.ok && result.ok) {
         setOrderId(result.orderId || '');
         setIsSubmitted(true);
-        
+
         // Google Ads conversion event
         if (typeof window !== "undefined" && (window as any).gtag) {
           (window as any).gtag('event', 'ads_conversion_Contacta_ne_1');
@@ -131,7 +132,7 @@ export default function Comanda() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
-    
+
     if (type === 'checkbox') {
       setFormData(prev => ({
         ...prev,
@@ -155,11 +156,22 @@ export default function Comanda() {
   if (isSubmitted) {
     return (
       <div className="min-h-screen">
+        {/* Google tag (gtag.js) */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16827353580" />
+        <Script id="google-ads-gtag-aw-16827353580">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16827353580');
+          `}
+        </Script>
+
         <Header />
         <main>
           <section className="pt-32 pb-20 bg-emerald section-spacing">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <motion.div 
+              <motion.div
                 className="glass-strong rounded-3xl p-12 border border-custom"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -170,7 +182,7 @@ export default function Comanda() {
                   Comanda ta a fost trimisa!
                 </h1>
                 <p className="text-xl text-secondary mb-6 leading-relaxed">
-                  Multumim pentru comanda! Vei fi contactat in cel mai scurt timp 
+                  Multumim pentru comanda! Vei fi contactat in cel mai scurt timp
                   pentru confirmarea detaliilor de ridicare.
                 </p>
                 {orderId && (
@@ -200,14 +212,14 @@ export default function Comanda() {
                   </ul>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    href="/" 
+                  <Link
+                    href="/"
                     className="bg-gold hover:bg-gold/90 text-emerald font-bold py-4 px-10 rounded-2xl transition-all duration-300 inline-block font-serif text-lg hover:scale-105"
                   >
                     Pagina Principala
                   </Link>
-                  <Link 
-                    href="/servicii" 
+                  <Link
+                    href="/servicii"
                     className="glass hover:glass-strong text-white font-semibold py-4 px-10 rounded-2xl transition-all duration-300 inline-block border border-custom text-lg hover:scale-105"
                   >
                     Servicii
@@ -224,8 +236,19 @@ export default function Comanda() {
 
   return (
     <div className="min-h-screen">
+      {/* Google tag (gtag.js) */}
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16827353580" />
+      <Script id="google-ads-gtag-aw-16827353580">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16827353580');
+        `}
+      </Script>
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="hero-gradient text-white pt-32 pb-24 section-spacing relative overflow-hidden">
@@ -233,7 +256,7 @@ export default function Comanda() {
             <div className="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl"></div>
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -243,7 +266,7 @@ export default function Comanda() {
                 Comanda Online
               </h1>
               <p className="text-2xl mb-8 text-secondary max-w-3xl mx-auto leading-relaxed">
-                Completeaza formularul de mai jos si te vom contacta pentru 
+                Completeaza formularul de mai jos si te vom contacta pentru
                 confirmarea programarii. Transport inclus!
               </p>
             </motion.div>
@@ -253,7 +276,7 @@ export default function Comanda() {
         {/* Form Section */}
         <section className="py-20 bg-emerald section-spacing">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
+            <motion.div
               className="glass-strong rounded-3xl p-10 border border-custom"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -296,7 +319,7 @@ export default function Comanda() {
                         <p className="text-red-400 text-sm mt-2">{errors.nume}</p>
                       )}
                     </div>
-                    
+
                     <div>
                       <label className="block text-base font-medium text-secondary mb-3">
                         Telefon *
@@ -342,7 +365,7 @@ export default function Comanda() {
                         <option value="Altul">Altul</option>
                       </select>
                     </div>
-                    
+
                     <div>
                       <label className="block text-base font-medium text-secondary mb-3">
                         Strada *
@@ -361,7 +384,7 @@ export default function Comanda() {
                         <p className="text-red-400 text-sm mt-2">{errors.strada}</p>
                       )}
                     </div>
-                    
+
                     <div>
                       <label className="block text-base font-medium text-secondary mb-3">
                         Numar *
@@ -380,7 +403,7 @@ export default function Comanda() {
                         <p className="text-red-400 text-sm mt-2">{errors.numar}</p>
                       )}
                     </div>
-                    
+
                     <div>
                       <label className="block text-base font-medium text-secondary mb-3">
                         Bloc
@@ -394,7 +417,7 @@ export default function Comanda() {
                         placeholder="A3"
                       />
                     </div>
-                    
+
                     <div>
                       <label className="block text-base font-medium text-secondary mb-3">
                         Scara
@@ -408,7 +431,7 @@ export default function Comanda() {
                         placeholder="2"
                       />
                     </div>
-                    
+
                     <div>
                       <label className="block text-base font-medium text-secondary mb-3">
                         Apartament
@@ -445,7 +468,7 @@ export default function Comanda() {
                         min={new Date().toISOString().split('T')[0]}
                       />
                     </div>
-                    
+
                     <div>
                       <label className="block text-base font-medium text-secondary mb-3">
                         Interval orar preferat
@@ -462,7 +485,7 @@ export default function Comanda() {
                         <option value="15:00-18:00">15:00 - 18:00</option>
                       </select>
                     </div>
-                    
+
                     <div>
                       <label className="block text-base font-medium text-secondary mb-3">
                         Numar covoare
@@ -478,7 +501,7 @@ export default function Comanda() {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="mt-6">
                     <label className="block text-base font-medium text-secondary mb-3">
                       Observatii
@@ -507,7 +530,7 @@ export default function Comanda() {
                       }`}
                     />
                     <span className="text-base text-secondary">
-                      Sunt de acord cu prelucrarea datelor personale in conformitate cu 
+                      Sunt de acord cu prelucrarea datelor personale in conformitate cu
                       GDPR. Datele mele vor fi folosite doar pentru procesarea acestei comenzi. *
                     </span>
                   </label>
@@ -521,7 +544,7 @@ export default function Comanda() {
                     <p className="text-red-400 text-base">{submitError}</p>
                   </div>
                 )}
-                
+
                 <div className="flex justify-center pt-4">
                   <button
                     type="submit"
@@ -536,7 +559,7 @@ export default function Comanda() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

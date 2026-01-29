@@ -1,11 +1,11 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Container, Card, CardHeader, CardBody, Input, Textarea, Button } from '@/components/ui/aniva';
 import { CheckCircle } from 'lucide-react';
-
 
 export default function ComandaOnline() {
   const startedAtRef = useRef(Date.now());
@@ -37,7 +37,7 @@ export default function ComandaOnline() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    
+
     if (name.startsWith('address.')) {
       const field = name.split('.')[1];
       setFormData(prev => ({
@@ -102,7 +102,7 @@ export default function ComandaOnline() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -155,7 +155,7 @@ export default function ComandaOnline() {
         setOrderId(result.orderId || '');
         setIsSuccess(true);
         setFormData(initialFormData);
-        
+
         // Google Ads conversion event
         if (typeof window !== "undefined" && (window as any).gtag) {
           (window as any).gtag('event', 'ads_conversion_Contacta_ne_1');
@@ -174,6 +174,17 @@ export default function ComandaOnline() {
   if (isSuccess) {
     return (
       <>
+        {/* Google tag (gtag.js) */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16827353580" />
+        <Script id="google-ads-gtag-aw-16827353580">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16827353580');
+          `}
+        </Script>
+
         <Header />
         <main className="page-pad">
           <Container>
@@ -212,8 +223,19 @@ export default function ComandaOnline() {
 
   return (
     <>
+      {/* Google tag (gtag.js) */}
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16827353580" />
+      <Script id="google-ads-gtag-aw-16827353580">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16827353580');
+        `}
+      </Script>
+
       <Header />
-      
+
       <main className="page-pad">
         <Container>
           <div className="max-w-4xl mx-auto">
@@ -230,191 +252,191 @@ export default function ComandaOnline() {
               <Card className="rounded-[32px] p-6 md:p-10 border border-white/40 bg-white/35 backdrop-blur-xl shadow-2xl">
                 <CardBody>
                   <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <h2 className="card-title mb-4">Date personale</h2>
-                    <div className="space-y-4">
+                    <div>
+                      <h2 className="card-title mb-4">Date personale</h2>
+                      <div className="space-y-4">
+                        <input
+                          type="text"
+                          name="website"
+                          value={formData.website}
+                          onChange={handleChange}
+                          style={{ display: 'none' }}
+                          tabIndex={-1}
+                          autoComplete="off"
+                        />
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-text">Nume complet *</label>
+                          <Input
+                            name="customerName"
+                            value={formData.customerName}
+                            onChange={handleChange}
+                            placeholder="Ion Popescu"
+                          />
+                          {errors.customerName && <p className="mt-1 text-sm text-red-600">{errors.customerName}</p>}
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-text">Telefon *</label>
+                          <Input
+                            name="phone"
+                            type="tel"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="0759123456"
+                          />
+                          {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-text">Email (optional)</label>
+                          <Input
+                            name="email"
+                            type="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="email@exemplu.ro"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="divider" />
+
+                    <div>
+                      <h2 className="card-title mb-4">Adresa ridicare</h2>
+                      <div className="space-y-4">
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-text">Strada *</label>
+                          <Input
+                            name="address.street"
+                            value={formData.address.street}
+                            onChange={handleChange}
+                            placeholder="Str. Exemplu"
+                          />
+                          {errors['address.street'] && <p className="mt-1 text-sm text-red-600">{errors['address.street']}</p>}
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-sm font-semibold mb-2 text-text">Numar</label>
+                            <Input
+                              name="address.number"
+                              value={formData.address.number}
+                              onChange={handleChange}
+                              placeholder="1"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-sm font-semibold mb-2 text-text">Bloc</label>
+                            <Input
+                              name="address.bloc"
+                              value={formData.address.bloc}
+                              onChange={handleChange}
+                              placeholder="A3"
+                            />
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-sm font-semibold mb-2 text-text">Scara</label>
+                            <Input
+                              name="address.scara"
+                              value={formData.address.scara}
+                              onChange={handleChange}
+                              placeholder="2"
+                            />
+                          </div>
+                          <div>
+                            <label className="block text-sm font-semibold mb-2 text-text">Apartament</label>
+                            <Input
+                              name="address.ap"
+                              value={formData.address.ap}
+                              onChange={handleChange}
+                              placeholder="14"
+                            />
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-sm font-semibold mb-2 text-text">Oras *</label>
+                            <Input
+                              name="address.city"
+                              value={formData.address.city}
+                              onChange={handleChange}
+                            />
+                            {errors['address.city'] && <p className="mt-1 text-sm text-red-600">{errors['address.city']}</p>}
+                          </div>
+                          <div>
+                            <label className="block text-sm font-semibold mb-2 text-text">Judet</label>
+                            <Input
+                              name="address.county"
+                              value={formData.address.county}
+                              onChange={handleChange}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="divider" />
+
+                    <div>
+                      <h2 className="card-title mb-4">Detalii comanda</h2>
+                      <div className="space-y-4">
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-text">Tip serviciu</label>
+                          <select
+                            name="serviceType"
+                            value={formData.serviceType}
+                            onChange={handleChange}
+                            className="input"
+                          >
+                            <option value="spalare_covoare">Spalare covoare</option>
+                            <option value="curatare_tapiterii">Curatare tapiterii</option>
+                            <option value="reparatii_festonare">Reparatii & festonare</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-text">Data preferata (optional)</label>
+                          <Input
+                            name="preferredDate"
+                            type="date"
+                            value={formData.preferredDate}
+                            onChange={handleChange}
+                            min={new Date().toISOString().split('T')[0]}
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm font-semibold mb-2 text-text">Observatii (optional)</label>
+                          <Textarea
+                            name="notes"
+                            value={formData.notes}
+                            onChange={handleChange}
+                            placeholder="Detalii suplimentare despre covoare, pete dificile, etc."
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="divider" />
+
+                    <div className="flex items-start gap-3">
                       <input
-                        type="text"
-                        name="website"
-                        value={formData.website}
+                        id="gdpr"
+                        name="gdpr"
+                        type="checkbox"
+                        checked={formData.gdpr}
                         onChange={handleChange}
-                        style={{ display: 'none' }}
-                        tabIndex={-1}
-                        autoComplete="off"
+                        className="mt-1"
                       />
-                      <div>
-                        <label className="block text-sm font-semibold mb-2 text-text">Nume complet *</label>
-                        <Input
-                          name="customerName"
-                          value={formData.customerName}
-                          onChange={handleChange}
-                          placeholder="Ion Popescu"
-                        />
-                        {errors.customerName && <p className="mt-1 text-sm text-red-600">{errors.customerName}</p>}
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold mb-2 text-text">Telefon *</label>
-                        <Input
-                          name="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="0759123456"
-                        />
-                        {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold mb-2 text-text">Email (optional)</label>
-                        <Input
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="email@exemplu.ro"
-                        />
-                      </div>
+                      <label htmlFor="gdpr" className="text-sm text-text">
+                        Sunt de acord cu prelucrarea datelor si cu termenii de contact.
+                      </label>
                     </div>
-                  </div>
+                    {errors.gdpr && <p className="text-sm text-red-600">{errors.gdpr}</p>}
 
-                  <div className="divider" />
-
-                  <div>
-                    <h2 className="card-title mb-4">Adresa ridicare</h2>
-                    <div className="space-y-4">
-                      <div>
-                        <label className="block text-sm font-semibold mb-2 text-text">Strada *</label>
-                        <Input
-                          name="address.street"
-                          value={formData.address.street}
-                          onChange={handleChange}
-                          placeholder="Str. Exemplu"
-                        />
-                        {errors['address.street'] && <p className="mt-1 text-sm text-red-600">{errors['address.street']}</p>}
+                    {errors.submit && (
+                      <div className="p-4 bg-red-50 border border-red-200 rounded-2xl">
+                        <p className="text-sm text-red-600">{errors.submit}</p>
                       </div>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-semibold mb-2 text-text">Numar</label>
-                          <Input
-                            name="address.number"
-                            value={formData.address.number}
-                            onChange={handleChange}
-                            placeholder="1"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold mb-2 text-text">Bloc</label>
-                          <Input
-                            name="address.bloc"
-                            value={formData.address.bloc}
-                            onChange={handleChange}
-                            placeholder="A3"
-                          />
-                        </div>
-                      </div>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-semibold mb-2 text-text">Scara</label>
-                          <Input
-                            name="address.scara"
-                            value={formData.address.scara}
-                            onChange={handleChange}
-                            placeholder="2"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold mb-2 text-text">Apartament</label>
-                          <Input
-                            name="address.ap"
-                            value={formData.address.ap}
-                            onChange={handleChange}
-                            placeholder="14"
-                          />
-                        </div>
-                      </div>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-semibold mb-2 text-text">Oras *</label>
-                          <Input
-                            name="address.city"
-                            value={formData.address.city}
-                            onChange={handleChange}
-                          />
-                          {errors['address.city'] && <p className="mt-1 text-sm text-red-600">{errors['address.city']}</p>}
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold mb-2 text-text">Judet</label>
-                          <Input
-                            name="address.county"
-                            value={formData.address.county}
-                            onChange={handleChange}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="divider" />
-
-                  <div>
-                    <h2 className="card-title mb-4">Detalii comanda</h2>
-                    <div className="space-y-4">
-                      <div>
-                        <label className="block text-sm font-semibold mb-2 text-text">Tip serviciu</label>
-                        <select
-                          name="serviceType"
-                          value={formData.serviceType}
-                          onChange={handleChange}
-                          className="input"
-                        >
-                          <option value="spalare_covoare">Spalare covoare</option>
-                          <option value="curatare_tapiterii">Curatare tapiterii</option>
-                          <option value="reparatii_festonare">Reparatii & festonare</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold mb-2 text-text">Data preferata (optional)</label>
-                        <Input
-                          name="preferredDate"
-                          type="date"
-                          value={formData.preferredDate}
-                          onChange={handleChange}
-                          min={new Date().toISOString().split('T')[0]}
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold mb-2 text-text">Observatii (optional)</label>
-                        <Textarea
-                          name="notes"
-                          value={formData.notes}
-                          onChange={handleChange}
-                          placeholder="Detalii suplimentare despre covoare, pete dificile, etc."
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="divider" />
-
-                  <div className="flex items-start gap-3">
-                    <input
-                      id="gdpr"
-                      name="gdpr"
-                      type="checkbox"
-                      checked={formData.gdpr}
-                      onChange={handleChange}
-                      className="mt-1"
-                    />
-                    <label htmlFor="gdpr" className="text-sm text-text">
-                      Sunt de acord cu prelucrarea datelor si cu termenii de contact.
-                    </label>
-                  </div>
-                  {errors.gdpr && <p className="text-sm text-red-600">{errors.gdpr}</p>}
-
-                  {errors.submit && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-2xl">
-                      <p className="text-sm text-red-600">{errors.submit}</p>
-                    </div>
-                  )}
+                    )}
 
                     <Button
                       type="submit"
