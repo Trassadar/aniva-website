@@ -9,12 +9,17 @@ import { Button } from "@/components/ui/aniva";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const openedAtRef = useRef<number>(0);
   const openedScrollYRef = useRef<number>(0);
 
   useEffect(() => {
     const handlePointerDownOutside = (event: PointerEvent) => {
       if (isMenuOpen && menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        // Don't close if clicking on the menu toggle button
+        if (buttonRef.current && buttonRef.current.contains(event.target as Node)) {
+          return;
+        }
         setIsMenuOpen(false);
       }
     };
@@ -91,9 +96,10 @@ export default function Header() {
           </nav>
 
           <button
+            ref={buttonRef}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden h-10 w-10 inline-flex items-center justify-center rounded-full border border-black/5 bg-white/80 text-[rgba(27,20,16,0.9)] shadow-sm"
-            aria-label="Deschide meniul"
+            aria-label={isMenuOpen ? "Inchide meniul" : "Deschide meniul"}
             aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
