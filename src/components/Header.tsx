@@ -141,9 +141,8 @@ export default function Header() {
               >
                 Comanda online
               </Button>
-                </div>
               </div>
-          </div>
+            </div>
           </>
         )}
       </header>
