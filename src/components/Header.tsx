@@ -15,13 +15,21 @@ export default function Header() {
 
   useEffect(() => {
     const handlePointerDownOutside = (event: PointerEvent) => {
-      if (isMenuOpen && menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        // Don't close if clicking on the menu toggle button
-        if (buttonRef.current && buttonRef.current.contains(event.target as Node)) {
-          return;
-        }
-        setIsMenuOpen(false);
+      if (!isMenuOpen) return;
+      
+      const target = event.target as Node;
+      
+      // Don't close if clicking on the menu toggle button
+      if (buttonRef.current && buttonRef.current.contains(target)) {
+        return;
       }
+      
+      // Don't close if clicking inside the menu
+      if (menuRef.current && menuRef.current.contains(target)) {
+        return;
+      }
+      
+      setIsMenuOpen(false);
     };
 
     const handleScroll = () => {
@@ -97,8 +105,11 @@ export default function Header() {
 
           <button
             ref={buttonRef}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden h-10 w-10 inline-flex items-center justify-center rounded-full border border-black/5 bg-white/80 text-[rgba(27,20,16,0.9)] shadow-sm"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsMenuOpen(!isMenuOpen);
+            }}
+            className="md:hidden h-10 w-10 inline-flex items-center justify-center rounded-full border border-black/5 bg-white/80 text-[rgba(27,20,16,0.9)] shadow-sm relative z-[100]"
             aria-label={isMenuOpen ? "Inchide meniul" : "Deschide meniul"}
             aria-expanded={isMenuOpen}
           >
