@@ -113,6 +113,11 @@ export default function Comanda() {
       if (response.ok && result.ok) {
         setOrderId(result.orderId || '');
         setIsSubmitted(true);
+        
+        // Google Ads conversion event
+        if (typeof window !== "undefined" && (window as any).gtag) {
+          (window as any).gtag('event', 'ads_conversion_Contacta_ne_1');
+        }
       } else {
         setSubmitError(result.error || 'Eroare la trimiterea comenzii');
       }

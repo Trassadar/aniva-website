@@ -155,6 +155,11 @@ export default function ComandaOnline() {
         setOrderId(result.orderId || '');
         setIsSuccess(true);
         setFormData(initialFormData);
+        
+        // Google Ads conversion event
+        if (typeof window !== "undefined" && (window as any).gtag) {
+          (window as any).gtag('event', 'ads_conversion_Contacta_ne_1');
+        }
       } else {
         setErrors({ submit: result.error || 'Eroare la trimiterea comenzii' });
       }
