@@ -104,7 +104,18 @@ export default function Header() {
           <>
             <div className="fixed inset-0 bg-black/20 z-50 md:hidden" onClick={() => setIsMenuOpen(false)} />
             <div ref={menuRef} className="md:hidden border-t border-black/5 bg-white/95 backdrop-blur relative z-60">
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-semibold text-[rgba(27,20,16,0.9)]">Meniul</span>
+                  <button
+                    onClick={() => setIsMenuOpen(false)}
+                    className="h-8 w-8 inline-flex items-center justify-center rounded-full border border-black/5 bg-white/80 text-[rgba(27,20,16,0.9)] shadow-sm"
+                    aria-label="Inchide meniul"
+                  >
+                    <X size={18} />
+                  </button>
+                </div>
+                <div className="flex flex-col gap-2">
                 <Link
                   href="/"
                   className="py-2 text-sm font-semibold text-[rgba(27,20,16,0.8)] hover:text-[rgba(27,20,16,1)] transition"
@@ -141,7 +152,8 @@ export default function Header() {
               >
                 Comanda online
               </Button>
-            </div>
+                </div>
+              </div>
           </div>
           </>
         )}
