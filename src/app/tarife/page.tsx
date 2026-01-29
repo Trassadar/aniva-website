@@ -46,6 +46,9 @@ export default function Tarife() {
                   <p className="card-muted mt-4">
                     Pret pentru spalare si curatare covoare
                   </p>
+                  <p className="text-xs mt-2 text-muted italic">
+                    * Orice covor sub 1 mp se tarifeaza ca 1 mp
+                  </p>
                 </div>
 
                 <div className="space-y-4">
@@ -67,6 +70,9 @@ export default function Tarife() {
                         </div>
                         <p className="text-xs mt-3 italic text-muted">
                           Daca comanda este sub minim, se taxeaza minimul
+                        </p>
+                        <p className="text-xs mt-2 italic text-muted">
+                          * Orice covor sub 1 mp se tarifeaza ca 1 mp
                         </p>
                       </div>
                     </div>
