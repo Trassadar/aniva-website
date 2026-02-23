@@ -35,11 +35,15 @@ export async function POST(request: NextRequest) {
   try {
     const body = (await request.json().catch(() => ({}))) as SubmitBody;
 
-    const token = process.env.CARPETAN_PUBLIC_ORDER_TOKEN || "";
+    const token = (
+      process.env.CARPETAN_PUBLIC_ORDER_TOKEN ||
+      process.env.PUBLIC_ORDER_TOKEN ||
+      ""
+    ).trim();
     const apiBase = (process.env.CARPETAN_API_URL || "https://carpetan.com").replace(/\/$/, "");
     if (!token) {
       return NextResponse.json(
-        { ok: false, error: "Server configuration error" },
+        { ok: false, error: "Server configuration error: lipseste CARPETAN_PUBLIC_ORDER_TOKEN" },
         { status: 500 }
       );
     }
