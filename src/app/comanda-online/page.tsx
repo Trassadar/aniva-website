@@ -116,6 +116,7 @@ export default function ComandaOnline() {
     try {
       const orderData = {
         ownerUid: 'gXVFAbi3RgYNQ59XBQHw1TP9tXL2',
+        source: 'aniva-web',
         nume: formData.customerName.trim(),
         telefon: formData.phone.replace(/\s/g, ''),
         email: formData.email.trim() || '',
@@ -134,7 +135,7 @@ export default function ComandaOnline() {
         ttsMs: Date.now() - startedAtRef.current,
       };
 
-      const response = await fetch('/api/public/aniva-order', {
+      const response = await fetch('/api/submit-order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -152,7 +153,7 @@ export default function ComandaOnline() {
       }
 
       if (response.ok && result.ok) {
-        setOrderId(result.orderId || '');
+        setOrderId(result.orderId || result.id || '');
         setIsSuccess(true);
         setFormData(initialFormData);
 

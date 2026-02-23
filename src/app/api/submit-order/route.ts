@@ -3,6 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 export const runtime = "nodejs";
 
 type SubmitBody = {
+  ownerUid?: string;
+  tenantId?: string;
+  source?: string;
   nume?: string;
   telefon?: string;
   email?: string;
@@ -57,13 +60,16 @@ export async function POST(request: NextRequest) {
       county,
       bloc: body.bloc || "",
       scara: body.scara || "",
-      apartament: body.ap || "",
+      apartament: body.ap || body.apartament || "",
       observatii,
       pickupDate,
       pickupInterval,
       email: body.email || "",
       website: body.website || "",
       ttsMs: body.ttsMs || 0,
+      ownerUid: (body.ownerUid || process.env.CARPETAN_OWNER_UID || "").trim(),
+      tenantId: (body.tenantId || process.env.CARPETAN_TENANT_ID || "").trim(),
+      source: (body.source || "aniva-web").toString().trim() || "aniva-web",
     };
 
     const response = await fetch(`${apiBase}/api/public/orders`, {

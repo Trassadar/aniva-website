@@ -77,6 +77,8 @@ export default function Comanda() {
 
     try {
       const orderData = {
+        ownerUid: 'gXVFAbi3RgYNQ59XBQHw1TP9tXL2',
+        source: 'aniva-web',
         nume: formData.nume,
         telefon: formData.telefon,
         oras: formData.oras,
@@ -93,7 +95,7 @@ export default function Comanda() {
         website: formData.website
       };
 
-      const response = await fetch('/api/public/aniva-order', {
+      const response = await fetch('/api/submit-order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -112,7 +114,7 @@ export default function Comanda() {
       }
 
       if (response.ok && result.ok) {
-        setOrderId(result.orderId || '');
+        setOrderId(result.orderId || result.id || '');
         setIsSubmitted(true);
 
         // Google Ads conversion event
