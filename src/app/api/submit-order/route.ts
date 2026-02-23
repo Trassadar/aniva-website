@@ -16,6 +16,7 @@ type SubmitBody = {
   bloc?: string;
   scara?: string;
   ap?: string;
+  apartament?: string;
   observatii?: string;
   dataPreferata?: string;
   interval?: string;
