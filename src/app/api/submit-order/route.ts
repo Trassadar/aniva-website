@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
       process.env.PUBLIC_ORDER_TOKEN ||
       ""
     ).trim();
-    const apiBase = (process.env.CARPETAN_API_URL || "https://carpetan.com").replace(/\/$/, "");
+    const apiBase = (process.env.CARPETAN_API_URL || "https://www.carpetan.com").replace(/\/$/, "");
     if (!token) {
       return NextResponse.json(
         { ok: false, error: "Server configuration error: lipseste CARPETAN_PUBLIC_ORDER_TOKEN" },
