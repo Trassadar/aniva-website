@@ -35,10 +35,11 @@ export async function POST(request: NextRequest) {
   try {
     const body = (await request.json().catch(() => ({}))) as SubmitBody;
 
+    const FALLBACK_PUBLIC_ORDER_TOKEN = "123456789";
     const token = (
       process.env.CARPETAN_PUBLIC_ORDER_TOKEN ||
       process.env.PUBLIC_ORDER_TOKEN ||
-      ""
+      FALLBACK_PUBLIC_ORDER_TOKEN
     ).trim();
     const apiBase = (process.env.CARPETAN_API_URL || "https://www.carpetan.com").replace(/\/$/, "");
     if (!token) {
