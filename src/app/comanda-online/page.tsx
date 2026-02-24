@@ -115,7 +115,7 @@ export default function ComandaOnline() {
 
     try {
       const orderData = {
-        ownerUid: 'gXVFAbi3RgYNQ59XBQHw1TP9tXL2',
+        ownerUid: 'z9pKgJiIQZM4XRewdKvdeGRz5ij1',
         source: 'aniva-web',
         nume: formData.customerName.trim(),
         telefon: formData.phone.replace(/\s/g, ''),
