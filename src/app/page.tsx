@@ -103,7 +103,7 @@ function ServicesGrid() {
     {
       icon: Sparkles,
       title: "Spalare covoare",
-      badge: "11 lei/mp",
+      badge: "13 lei/mp",
       text: "Curatare in profunzime, indepartare pete, spalare controlata cu detergenti specializati.",
       href: "/servicii",
       link: "Afla mai multe",
@@ -183,8 +183,8 @@ function QuickPricing() {
                     <div className="text-sm text-muted">Pret per metru patrat</div>
                   </div>
                   <div className="price-pill">
-                    <span className="line-through text-muted mr-2 text-sm">13 lei/mp</span>
-                    <span className="font-bold text-brand">11 lei/mp</span>
+                    <span className="line-through text-muted mr-2 text-sm">15 lei/mp</span>
+                    <span className="font-bold text-brand">13 lei/mp</span>
                   </div>
                 </div>
 

@@ -40,8 +40,8 @@ export default function Servicii() {
                       <div className="flex items-center gap-3 mb-2">
                         <h2 className="card-title">Spalare covoare</h2>
                         <Badge variant="soft" className="flex flex-col items-center">
-                          <span className="font-bold">11 lei/mp</span>
-                          <span className="text-xs line-through opacity-60">13 lei/mp</span>
+                          <span className="font-bold">13 lei/mp</span>
+                          <span className="text-xs line-through opacity-60">15 lei/mp</span>
                         </Badge>
                       </div>
                       <p className="card-muted">

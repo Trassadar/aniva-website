@@ -7,7 +7,7 @@ import { generateMetadata } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Tarife Spalatorie Covoare ANIVA Brasov | Preturi Transparente',
-  description: 'Tarife transparente pentru spalare covoare in Brasov. Pret 11 lei/mp (reducere de la 13 lei). Comanda minima pe zone. Festonat 15 lei/ml. Vezi toate detaliile.',
+  description: 'Tarife transparente pentru spalare covoare in Brasov. Pret 13 lei/mp (reducere de la 15 lei). Comanda minima pe zone. Festonat 15 lei/ml. Vezi toate detaliile.',
   path: '/tarife',
 });
 
@@ -40,8 +40,8 @@ export default function Tarife() {
               <CardBody>
                 <div className="text-center mb-6">
                   <Badge variant="soft" className="text-2xl px-6 py-3 flex flex-col items-center gap-1">
-                    <span className="font-bold">11 lei/mp</span>
-                    <span className="text-sm line-through opacity-60 font-normal">13 lei/mp</span>
+                    <span className="font-bold">13 lei/mp</span>
+                    <span className="text-sm line-through opacity-60 font-normal">15 lei/mp</span>
                   </Badge>
                   <p className="card-muted mt-4">
                     Pret pentru spalare si curatare covoare
@@ -59,13 +59,13 @@ export default function Tarife() {
                         <p className="font-extrabold mb-2 text-text">Comanda minima pe zone:</p>
                         <div className="space-y-2 text-sm text-muted">
                           <p>• <strong className="text-text">Brasov / Stupini / Sanpetru:</strong> 6 mp 
-                            <span className="ml-2"><span className="line-through opacity-60">78 lei</span> <strong className="text-text font-bold">66 lei</strong></span>
+                            <span className="ml-2"><span className="line-through opacity-60">90 lei</span> <strong className="text-text font-bold">78 lei</strong></span>
                           </p>
                           <p>• <strong className="text-text">Codlea / Sacele / Harman / Ghimbav / Cristian:</strong> 6 mp 
-                            <span className="ml-2"><span className="line-through opacity-60">78 lei</span> <strong className="text-text font-bold">66 lei</strong></span>
+                            <span className="ml-2"><span className="line-through opacity-60">90 lei</span> <strong className="text-text font-bold">78 lei</strong></span>
                           </p>
                           <p>• <strong className="text-text">Prejmer / Poiana Brasov / Bran / Sinaia / Busteni / Predeal:</strong> 25 mp 
-                            <span className="ml-2"><span className="line-through opacity-60">325 lei</span> <strong className="text-text font-bold">275 lei</strong></span>
+                            <span className="ml-2"><span className="line-through opacity-60">375 lei</span> <strong className="text-text font-bold">325 lei</strong></span>
                           </p>
                         </div>
                         <p className="text-xs mt-3 italic text-muted">
@@ -100,19 +100,19 @@ export default function Tarife() {
                   <div className="p-4 bg-surface2 rounded-2xl ring-1 ring-border/70">
                     <p className="font-extrabold mb-2 text-text">Exemplu 1: Covor 3x4m</p>
                     <p className="text-sm text-muted mb-2">Suprafata: 3m x 4m = 12 mp</p>
-                    <p className="text-sm text-muted mb-2">Pret: 12 mp x 11 lei = <strong className="text-text">132 lei</strong></p>
+                    <p className="text-sm text-muted mb-2">Pret: 12 mp x 13 lei = <strong className="text-text">156 lei</strong></p>
                   </div>
                   <div className="p-4 bg-surface2 rounded-2xl ring-1 ring-border/70">
                     <p className="font-extrabold mb-2 text-text">Exemplu 2: Covor 2x3m (Brasov)</p>
                     <p className="text-sm text-muted mb-2">Suprafata: 2m x 3m = 6 mp</p>
                     <p className="text-sm text-muted mb-2">Comanda minima: 6 mp</p>
-                    <p className="text-sm text-muted">Pret: 6 mp x 11 lei = <strong className="text-text">66 lei</strong></p>
+                    <p className="text-sm text-muted">Pret: 6 mp x 13 lei = <strong className="text-text">78 lei</strong></p>
                   </div>
                   <div className="p-4 bg-surface2 rounded-2xl ring-1 ring-border/70">
                     <p className="font-extrabold mb-2 text-text">Exemplu 3: Covor 1.5x2m (Brasov)</p>
                     <p className="text-sm text-muted mb-2">Suprafata: 1.5m x 2m = 3 mp</p>
                     <p className="text-sm text-muted mb-2">Comanda minima: 6 mp (se aplica minimul)</p>
-                    <p className="text-sm text-muted">Pret: 6 mp x 11 lei = <strong className="text-text">66 lei</strong></p>
+                    <p className="text-sm text-muted">Pret: 6 mp x 13 lei = <strong className="text-text">78 lei</strong></p>
                   </div>
                 </div>
               </CardBody>

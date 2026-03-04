@@ -7,7 +7,7 @@ import Script from "next/script";
 export const metadata = genMeta({
   title: "ANIVA - Spalatorie Covoare Brasov | Ridicare si Livrare Gratuita",
   description:
-    "Spalatorie profesionala de covoare in Brasov - ridicare si livrare gratuita. Servicii de calitate cu peste 4 ani de experienta. Preturi transparente: 11 lei/mp.",
+    "Spalatorie profesionala de covoare in Brasov - ridicare si livrare gratuita. Servicii de calitate cu peste 4 ani de experienta. Preturi transparente: 13 lei/mp.",
 });
 
 export default function RootLayout({

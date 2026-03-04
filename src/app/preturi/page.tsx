@@ -10,7 +10,7 @@ import Link from 'next/link';
 export default function Preturi() {
   const [area, setArea] = useState(10);
   
-  const pricePerMp = 11;
+  const pricePerMp = 13;
   const minOrder = 7;
   const minPrice = minOrder * pricePerMp;
   const maxArea = 50;
@@ -181,8 +181,8 @@ export default function Preturi() {
                     transition={{ duration: 0.5, type: "spring" }}
                   >
                     <div className="flex flex-col items-center gap-1">
-                      <span className="font-bold text-3xl">11 RON/mp</span>
-                      <span className="text-lg line-through opacity-60">13 RON/mp</span>
+                      <span className="font-bold text-3xl">13 RON/mp</span>
+                      <span className="text-lg line-through opacity-60">15 RON/mp</span>
                     </div>
                   </motion.div>
                   <p className="text-xl text-secondary">Pret standard pentru spalare covoare</p>
@@ -197,8 +197,8 @@ export default function Preturi() {
                   <div className="flex justify-between items-center py-4 border-b border-custom">
                     <span className="text-primary font-medium text-lg">Spalare standard covoare</span>
                     <div className="flex items-center gap-2">
-                      <span className="text-sm line-through opacity-60 text-secondary">13 RON/mp</span>
-                      <span className="text-gold font-bold text-xl">11 RON/mp</span>
+                      <span className="text-sm line-through opacity-60 text-secondary">15 RON/mp</span>
+                      <span className="text-gold font-bold text-xl">13 RON/mp</span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center py-4 border-b border-custom">
