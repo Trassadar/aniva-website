@@ -307,7 +307,7 @@ Comenzile sunt salvate in collection `orders` cu urmatoarea structura:
   - 6 mp in Brasov / Stupini / Sanpetru
   - 6 mp in Codlea / Sacele / Harman / Ghimbav / Cristian
   - 25 mp in Prejmer / Poiana Brasov / Bran / Sinaia / Busteni / Predeal
-- **Festonat**: 15 lei/ml
+- **Festonat**: 13 lei/ml (redus de la 15 lei/ml)
 - **Durata medie**: ~3 zile lucratoare
 
 ## Nota Importanta

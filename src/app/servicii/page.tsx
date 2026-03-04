@@ -149,7 +149,10 @@ export default function Servicii() {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h2 className="card-title">Reparatii & festonare</h2>
-                        <Badge variant="soft">15 lei/ml</Badge>
+                        <Badge variant="soft" className="flex flex-col items-center">
+                          <span className="font-bold">13 lei/ml</span>
+                          <span className="text-xs line-through opacity-60">15 lei/ml</span>
+                        </Badge>
                       </div>
                       <p className="card-muted">
                         Servicii de reparatii si festonare pentru covoare. Restauram si protejam covoarele tale cu atentie, prelungind durata de viata a acestora.

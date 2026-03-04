@@ -7,7 +7,7 @@ import { generateMetadata } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Tarife Spalatorie Covoare ANIVA Brasov | Preturi Transparente',
-  description: 'Tarife transparente pentru spalare covoare in Brasov. Pret 13 lei/mp (reducere de la 15 lei). Comanda minima pe zone. Festonat 15 lei/ml. Vezi toate detaliile.',
+  description: 'Tarife transparente pentru spalare covoare in Brasov. Pret 13 lei/mp (reducere de la 15 lei). Comanda minima pe zone. Festonat 13 lei/ml (reducere de la 15 lei). Vezi toate detaliile.',
   path: '/tarife',
 });
 
@@ -83,7 +83,10 @@ export default function Tarife() {
                       <p className="font-extrabold mb-1 text-text">Festonat covoare</p>
                       <p className="text-sm text-muted">Reparatii si protectie</p>
                     </div>
-                    <Badge variant="soft" className="text-lg px-4 py-2">15 lei/ml</Badge>
+                    <Badge variant="soft" className="text-lg px-4 py-2 flex flex-col items-center gap-1">
+                      <span className="font-bold">13 lei/ml</span>
+                      <span className="text-sm line-through opacity-60 font-normal">15 lei/ml</span>
+                    </Badge>
                   </div>
                 </div>
               </CardBody>

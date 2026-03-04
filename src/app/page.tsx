@@ -193,7 +193,10 @@ function QuickPricing() {
                     <div className="font-bold text-text">Festonat covoare</div>
                     <div className="text-sm text-muted">Reparatii si protectie</div>
                   </div>
-                  <div className="price-pill">15 lei/ml</div>
+                  <div className="price-pill">
+                    <span className="line-through text-muted mr-2 text-sm">15 lei/ml</span>
+                    <span className="font-bold text-brand">13 lei/ml</span>
+                  </div>
                 </div>
               </div>
 
