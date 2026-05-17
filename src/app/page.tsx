@@ -319,6 +319,59 @@ export default function Home() {
               </div>
               
       <ServicesGrid />
+
+      {/* Servicii si zone deservite – linkuri interne SEO */}
+      <section className="mt-10 md:mt-16">
+        <div className="container-app">
+          <div className="text-center mb-6">
+            <h2 className="section-title text-2xl md:text-3xl">Servicii si zone deservite</h2>
+            <p className="section-subtitle mt-2">
+              Acoperim tot Brasovul – curatare profesionala in cartierul tau
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2 justify-center mb-4">
+            {[
+              { href: '/spalatorie-covoare-brasov', label: 'Spalatorie covoare Brasov' },
+              { href: '/spalat-covoare-brasov', label: 'Spalat covoare Brasov' },
+              { href: '/curatare-covoare-brasov', label: 'Curatare covoare' },
+              { href: '/spalatorie-covoare-cu-ridicare-brasov', label: 'Covoare cu ridicare gratuita' },
+              { href: '/pret-spalat-covoare-brasov', label: 'Pret spalat covoare' },
+              { href: '/igienizare-covoare-brasov', label: 'Igienizare covoare' },
+              { href: '/curatare-canapele-brasov', label: 'Curatare canapele' },
+              { href: '/curatare-saltele-brasov', label: 'Curatare saltele' },
+              { href: '/curatare-mocheta-brasov', label: 'Curatare mocheta' },
+              { href: '/spalatorie-covoare-10-lei-mp-brasov', label: 'Oferta de la 10 lei/mp' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="inline-flex items-center px-4 py-2 rounded-full bg-white/55 border border-white/65 text-sm font-semibold text-text hover:bg-white/70 transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2 justify-center">
+            <span className="text-xs text-muted self-center mr-1">Zone:</span>
+            {[
+              { href: '/spalatorie-covoare-tractorul', label: 'Tractorul' },
+              { href: '/spalatorie-covoare-bartolomeu', label: 'Bartolomeu' },
+              { href: '/spalatorie-covoare-racadau', label: 'Racadau' },
+              { href: '/spalatorie-covoare-avantgarden', label: 'Avantgarden' },
+              { href: '/spalatorie-covoare-schei', label: 'Schei' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="service-badge hover:bg-white/80 transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <QuickPricing />
       <CTA />
 
