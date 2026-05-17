@@ -369,6 +369,19 @@ export default function Home() {
               { href: '/spalatorie-covoare-dupa-deal', label: 'Dupa Deal' },
               { href: '/spalatorie-covoare-timis', label: 'Timis' },
               { href: '/spalatorie-covoare-florilor', label: 'Florilor' },
+              { href: '/spalatorie-covoare-sacele', label: 'Sacele' },
+              { href: '/spalatorie-covoare-predeal', label: 'Predeal' },
+              { href: '/spalatorie-covoare-prejmer', label: 'Prejmer' },
+              { href: '/spalatorie-covoare-lunca-calnicului', label: 'Lunca Calnicului' },
+              { href: '/spalatorie-covoare-cristian', label: 'Cristian' },
+              { href: '/spalatorie-covoare-codlea', label: 'Codlea' },
+              { href: '/spalatorie-covoare-rasnov', label: 'Rasnov' },
+              { href: '/spalatorie-covoare-harman', label: 'Harman' },
+              { href: '/spalatorie-covoare-stupini', label: 'Stupini' },
+              { href: '/spalatorie-covoare-sanpetru', label: 'Sanpetru' },
+              { href: '/spalatorie-covoare-ghimbav', label: 'Ghimbav' },
+              { href: '/spalatorie-covoare-poiana-brasov', label: 'Poiana Brasov' },
+              { href: '/spalatorie-covoare-bran', label: 'Bran' },
             ].map((item) => (
               <Link
                 key={item.href}
