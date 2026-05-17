@@ -359,6 +359,16 @@ export default function Home() {
               { href: '/spalatorie-covoare-racadau', label: 'Racadau' },
               { href: '/spalatorie-covoare-avantgarden', label: 'Avantgarden' },
               { href: '/spalatorie-covoare-schei', label: 'Schei' },
+              { href: '/spalatorie-covoare-steagu', label: 'Steagu' },
+              { href: '/spalatorie-covoare-strada-carpatilor', label: 'Strada Carpatilor' },
+              { href: '/spalatorie-covoare-noua', label: 'Noua' },
+              { href: '/spalatorie-covoare-astra', label: 'Astra' },
+              { href: '/spalatorie-covoare-gemenii', label: 'Gemenii' },
+              { href: '/spalatorie-covoare-centru-brasov', label: 'Centru' },
+              { href: '/spalatorie-covoare-grivitei', label: 'Grivitei' },
+              { href: '/spalatorie-covoare-dupa-deal', label: 'Dupa Deal' },
+              { href: '/spalatorie-covoare-timis', label: 'Timis' },
+              { href: '/spalatorie-covoare-florilor', label: 'Florilor' },
             ].map((item) => (
               <Link
                 key={item.href}
