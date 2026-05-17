@@ -18,7 +18,7 @@ const benefits = [
   {
     icon: '📍',
     title: 'Acoperim comuna Cristian',
-    desc: 'Ridicam covoare din Cristian – localitate aflata chiar in vecinatatea atelierului nostru de pe Soseaua Cristianului.',
+    desc: 'Ridicam covoare din Cristian – localitate aflata chiar in vecinatatea spalatoriei noastre de covoare de pe Soseaua Cristianului.',
   },
   {
     icon: '🚚',
@@ -51,7 +51,7 @@ const faqs = [
   {
     question: 'Veniti sa ridicati covoare din Cristian?',
     answer:
-      'Da, acoperim comuna Cristian – aflata chiar langa atelierul nostru de pe Soseaua Cristianului Nr. 11. Ridicarea si livrarea sunt complet gratuite.',
+      'Da, acoperim comuna Cristian – aflata chiar langa spalatoria noastra de covoare de pe Soseaua Cristianului Nr. 11. Ridicarea si livrarea sunt complet gratuite.',
   },
   {
     question: 'Cat timp dureaza pana primesc covorul inapoi?',
@@ -64,9 +64,9 @@ const faqs = [
       'Pretul este 13 lei/mp, ridicare si livrare incluse gratuit. Comanda minima este de 6 mp (78 lei). Fara taxa suplimentara.',
   },
   {
-    question: 'Unde se afla atelierul ANIVA?',
+    question: 'Unde se afla spalatoria de covoare ANIVA?',
     answer:
-      'Atelierul nostru se afla pe Soseaua Cristianului Nr. 11, Brasov – chiar la intrarea spre comuna Cristian. Poti si sa aduci personal covoarele daca preferi.',
+      'Spalatoria noastra de covoare se afla pe Soseaua Cristianului Nr. 11, Brasov – chiar la intrarea spre comuna Cristian. Poti si sa aduci personal covoarele daca preferi.',
   },
   {
     question: 'Curatati si covoare mari, de living?',
@@ -82,7 +82,7 @@ export default function SpalatorieCovoarCristian() {
       <main>
         <SEOPageHero
           h1="Spalatorie Covoare Cristian Brasov – Ridicare si Livrare Gratuita"
-          subtitle="Locuiesti in Cristian si ai nevoie de covoare curate? ANIVA vine la tine – atelierul nostru este chiar pe Soseaua Cristianului. Ridicam covoarele, le curatam profesional si le aducem inapoi."
+          subtitle="Locuiesti in Cristian si ai nevoie de covoare curate? ANIVA vine la tine – spalatoria noastra de covoare este chiar pe Soseaua Cristianului. Ridicam covoarele, le curatam profesional si le aducem inapoi."
           badge="Cristian · 13 lei/mp · Ridicare gratuita"
         />
 
@@ -91,7 +91,7 @@ export default function SpalatorieCovoarCristian() {
             <div className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-[32px] p-6 md:p-10 shadow-xl">
               <div className="max-w-3xl mx-auto space-y-5 text-muted leading-relaxed">
                 <p>
-                  Atelierul <strong className="text-text">ANIVA</strong> se afla pe{' '}
+                  Spalatoria de covoare <strong className="text-text">ANIVA</strong> se afla pe{' '}
                   <strong className="text-text">Soseaua Cristianului Nr. 11, Brasov</strong> –
                   chiar la intrarea spre comuna Cristian. Suntem practic vecinii tai, ceea ce
                   inseamna ca acoperim Cristianul cu cea mai rapida ridicare posibila.
@@ -104,7 +104,7 @@ export default function SpalatorieCovoarCristian() {
                 </p>
                 <p>
                   Pretul este simplu: <strong className="text-text">13 lei/mp</strong>, ridicare
-                  si livrare incluse. Poti si sa aduci personal covoarele la atelier, daca esti
+                  si livrare incluse. Poti si sa aduci personal covoarele la spalatoria noastra, daca esti
                   in zona. Fara taxe suplimentare.
                 </p>
               </div>
