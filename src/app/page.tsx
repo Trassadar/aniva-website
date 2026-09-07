@@ -329,64 +329,19 @@ export default function Home() {
               Acoperim tot Brasovul – curatare profesionala in cartierul tau
             </p>
           </div>
-          <div className="flex flex-wrap gap-2 justify-center mb-4">
+          <div className="flex flex-wrap gap-2 justify-center">
             {[
-              { href: '/spalatorie-covoare-brasov', label: 'Spalatorie covoare Brasov' },
-              { href: '/spalat-covoare-brasov', label: 'Spalat covoare Brasov' },
-              { href: '/curatare-covoare-brasov', label: 'Curatare covoare' },
-              { href: '/spalatorie-covoare-cu-ridicare-brasov', label: 'Covoare cu ridicare gratuita' },
-              { href: '/pret-spalat-covoare-brasov', label: 'Pret spalat covoare' },
+              { href: '/spalatorie-covoare-10-lei-mp-brasov', label: 'Oferta spalare covoare' },
+              { href: '/spalatorie-covoare-cu-ridicare-brasov', label: 'Ridicare si livrare' },
+              { href: '/pret-spalat-covoare-brasov', label: 'Pret spalare covoare' },
+              { href: '/curatare-covoare-brasov', label: 'Curatare profesionala' },
               { href: '/igienizare-covoare-brasov', label: 'Igienizare covoare' },
               { href: '/curatare-canapele-brasov', label: 'Curatare canapele' },
-              { href: '/curatare-saltele-brasov', label: 'Curatare saltele' },
-              { href: '/curatare-mocheta-brasov', label: 'Curatare mocheta' },
-              { href: '/spalatorie-covoare-10-lei-mp-brasov', label: 'Oferta de la 10 lei/mp' },
             ].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className="inline-flex items-center px-4 py-2 rounded-full bg-white/55 border border-white/65 text-sm font-semibold text-text hover:bg-white/70 transition-colors"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-          <div className="flex flex-wrap gap-2 justify-center">
-            <span className="text-xs text-muted self-center mr-1">Zone:</span>
-            {[
-              { href: '/spalatorie-covoare-tractorul', label: 'Tractorul' },
-              { href: '/spalatorie-covoare-bartolomeu', label: 'Bartolomeu' },
-              { href: '/spalatorie-covoare-racadau', label: 'Racadau' },
-              { href: '/spalatorie-covoare-avantgarden', label: 'Avantgarden' },
-              { href: '/spalatorie-covoare-schei', label: 'Schei' },
-              { href: '/spalatorie-covoare-steagu', label: 'Steagu' },
-              { href: '/spalatorie-covoare-strada-carpatilor', label: 'Strada Carpatilor' },
-              { href: '/spalatorie-covoare-noua', label: 'Noua' },
-              { href: '/spalatorie-covoare-astra', label: 'Astra' },
-              { href: '/spalatorie-covoare-gemenii', label: 'Gemenii' },
-              { href: '/spalatorie-covoare-centru-brasov', label: 'Centru' },
-              { href: '/spalatorie-covoare-grivitei', label: 'Grivitei' },
-              { href: '/spalatorie-covoare-dupa-deal', label: 'Dupa Deal' },
-              { href: '/spalatorie-covoare-timis', label: 'Timis' },
-              { href: '/spalatorie-covoare-florilor', label: 'Florilor' },
-              { href: '/spalatorie-covoare-sacele', label: 'Sacele' },
-              { href: '/spalatorie-covoare-predeal', label: 'Predeal' },
-              { href: '/spalatorie-covoare-prejmer', label: 'Prejmer' },
-              { href: '/spalatorie-covoare-lunca-calnicului', label: 'Lunca Calnicului' },
-              { href: '/spalatorie-covoare-cristian', label: 'Cristian' },
-              { href: '/spalatorie-covoare-codlea', label: 'Codlea' },
-              { href: '/spalatorie-covoare-rasnov', label: 'Rasnov' },
-              { href: '/spalatorie-covoare-harman', label: 'Harman' },
-              { href: '/spalatorie-covoare-stupini', label: 'Stupini' },
-              { href: '/spalatorie-covoare-sanpetru', label: 'Sanpetru' },
-              { href: '/spalatorie-covoare-ghimbav', label: 'Ghimbav' },
-              { href: '/spalatorie-covoare-poiana-brasov', label: 'Poiana Brasov' },
-              { href: '/spalatorie-covoare-bran', label: 'Bran' },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="service-badge hover:bg-white/80 transition-colors"
               >
                 {item.label}
               </Link>

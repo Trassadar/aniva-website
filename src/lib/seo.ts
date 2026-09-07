@@ -120,7 +120,7 @@ export function generateStructuredData(type: 'LocalBusiness' | 'Organization' = 
                 name: 'ANIVA',
               },
             },
-            price: '11',
+            price: '13',
             priceCurrency: 'RON',
             unitCode: 'MTK',
           },
