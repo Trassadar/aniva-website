@@ -7,7 +7,7 @@ import { generateMetadata } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Servicii Spalatorie Covoare ANIVA Brasov | Curatare Profesionala',
-  description: 'Servicii complete de spalare si curatare covoare in Brasov. Proces profesional in 6 pasi. Preturi accesibile si rezultate garantate.',
+  description: 'Servicii complete de spălare și curățare covoare în Brașov. Proces profesional în 6 pași. Spălare covoare: 13 lei/mp. Festonare: 13 lei/ml.',
   path: '/servicii',
 });
 
@@ -39,9 +39,8 @@ export default function Servicii() {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h2 className="card-title">Spalare covoare</h2>
-                        <Badge variant="soft" className="flex flex-col items-center">
+                        <Badge variant="soft">
                           <span className="font-bold">13 lei/mp</span>
-                          <span className="text-xs font-normal">redus de la <del>15 lei/mp</del></span>
                         </Badge>
                       </div>
                       <p className="card-muted">
@@ -134,7 +133,7 @@ export default function Servicii() {
                     </p>
                   </div>
                   <Button variant="primary" href="/contact" className="btn-cta">
-                    Contacteaza-ne pentru oferta
+                    Contactează-ne
                   </Button>
                 </CardBody>
               </Card>
@@ -149,9 +148,8 @@ export default function Servicii() {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
                         <h2 className="card-title">Reparatii & festonare</h2>
-                        <Badge variant="soft" className="flex flex-col items-center">
+                        <Badge variant="soft">
                           <span className="font-bold">13 lei/ml</span>
-                          <span className="text-xs font-normal">redus de la <del>15 lei/ml</del></span>
                         </Badge>
                       </div>
                       <p className="card-muted">
@@ -181,7 +179,7 @@ export default function Servicii() {
                     </ul>
                   </div>
                   <Button variant="primary" href="/contact" className="btn-cta">
-                    Contacteaza-ne pentru oferta
+                    Contactează-ne
                   </Button>
                 </CardBody>
               </Card>
@@ -193,7 +191,7 @@ export default function Servicii() {
               <CardBody className="text-center">
                 <h2 className="card-title mb-4">Ai nevoie de ajutor?</h2>
                 <p className="card-muted mb-6">
-                  Contacteaza-ne pentru mai multe informatii sau pentru o oferta personalizata
+                  Contactează-ne pentru mai multe informații
                 </p>
                 <div className="flex flex-col gap-4">
                   <Button variant="primary" href="/comanda-online" className="btn-cta">

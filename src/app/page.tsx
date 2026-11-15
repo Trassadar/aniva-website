@@ -7,7 +7,25 @@ import { Button } from "@/components/ui/aniva";
 import Header from "@/components/Header";
 import FAQSection from "@/components/seo/FAQSection";
 import { generateMetadata as genMeta } from "@/lib/seo";
-import { BadgeCheck, Clock, Shield, Truck, Sparkles, Droplets } from "lucide-react";
+import { BadgeCheck, Clock, Shield, Truck, Sparkles, Droplets, Home as HomeIcon, Calculator } from "lucide-react";
+import Reveal from "@/components/interactive/Reveal";
+import HowItWorks from "@/components/interactive/HowItWorks";
+import PriceCalculator from "@/components/interactive/PriceCalculator";
+import PriceCount from "@/components/interactive/PriceCount";
+
+const heroTitleWords = [
+  "Spălătorie",
+  "covoare",
+  "Brașov",
+  "–",
+  "spălare",
+  "profesională",
+  "cu",
+  "ridicare",
+  "și",
+  "livrare",
+  "gratuită",
+];
 
 export const metadata = genMeta({
   title: "Spălătorie Covoare Brașov | 13 lei/mp, Ridicare Gratuită | ANIVA",
@@ -20,7 +38,7 @@ const homeFaqs = [
   {
     question: "Cât costă spălatul covoarelor în Brașov?",
     answer:
-      "Spălarea costă 13 lei pe metru pătrat, redus de la 15 lei/mp. Un covor de 3×4 m are 12 mp și costă 156 lei. Orice covor sub 1 mp se tarifează ca 1 mp. Festonatul este un serviciu separat: 13 lei pe metru liniar, redus de la 15 lei/ml. Lista completă și exemplele sunt pe pagina de tarife.",
+      "Spălarea covoarelor costă 13 lei/mp. Un covor de 3×4 m are 12 mp și costă 156 lei. Orice covor sub 1 mp se tarifează ca 1 mp. Festonarea este un serviciu separat: 13 lei/ml. Lista completă și exemplele sunt pe pagina de tarife.",
   },
   {
     question: "Ridicarea și livrarea sunt gratuite?",
@@ -35,7 +53,7 @@ const homeFaqs = [
   {
     question: "Mai există prețul de 10 lei/mp?",
     answer:
-      "Nu. Oferta de 10 lei/mp nu mai este valabilă. Prețul actual, pe tot site-ul, este 13 lei/mp. Pagina despre prețul accesibil explică tariful de acum și diferența dintre metru pătrat și metru liniar.",
+      "Nu. Prețul de 10 lei/mp nu există. Spălarea covoarelor costă 13 lei/mp, pe tot site-ul. Pagina despre preț explică tariful și diferența dintre metru pătrat și metru liniar.",
   },
   {
     question: "Cum se măsoară covorul?",
@@ -50,12 +68,12 @@ const homeFaqs = [
   {
     question: "Unde este spălătoria și cum comand?",
     answer:
-      "Atelierul este pe Șos. Cristianului nr. 11, Brașov. Poți completa formularul de comandă online sau suna la 0759 158 914. Email: spalatoriaaniva@gmail.com. La bloc, scrie scara și apartamentul; etajul îl poți pune la observații.",
+      "Atelierul este pe Șos. Cristianului nr. 11, Brașov, dar nu primim covoare la sediu: preluăm doar de la domiciliu, cu ridicare și livrare gratuită. Poți completa formularul de comandă online sau suna la 0759 158 914. Email: spalatoriaaniva@gmail.com. La bloc, scrie scara și apartamentul; etajul îl poți pune la observații.",
   },
   {
     question: "Curățați și canapele, saltele sau mochetă?",
     answer:
-      "Spălarea covoarelor are preț fix, 13 lei/mp. Curățarea canapelelor, a saltelelor și a mochetei se face la cerere, cu ofertă după material, pentru că nu se tarifează la metru pătrat ca un covor. Paginile dedicate explică fiecare serviciu.",
+      "Spălarea covoarelor are preț fix, 13 lei/mp. Curățarea canapelelor, a saltelelor și a mochetei se face la cerere, cu preț stabilit după material, pentru că nu se tarifează la metru pătrat ca un covor. Paginile dedicate explică fiecare serviciu.",
   },
 ];
 
@@ -107,7 +125,7 @@ function ProcessWithImages() {
             </div>
 
             <div className="grid grid-cols-1 gap-4">
-              <div className="relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
+              <div className="img-zoom relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
                 <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent z-10" />
                 <Image
                   src="/images/Transport-aniva.png"
@@ -124,7 +142,7 @@ function ProcessWithImages() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
+              <div className="img-zoom relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
                 <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent z-10" />
                 <Image
                   src="/images/curatare-sigura-copii.jpg.png"
@@ -181,21 +199,22 @@ function ProcessExplained() {
   return (
     <section className="mt-10 md:mt-16">
       <div className="container-app">
-        <div className="text-center">
+        <Reveal className="text-center">
           <h2 className="section-title text-3xl md:text-4xl">Cum spălăm covorul</h2>
           <p className="section-subtitle mt-3 max-w-3xl mx-auto">
             Covorul pleacă de la tine, se spală în atelierul de pe Șos. Cristianului nr. 11 și se întoarce uscat. Nu îl spălăm pe loc, în casă.
           </p>
-        </div>
+        </Reveal>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
-          {steps.map((step) => (
-            <div
+          {steps.map((step, i) => (
+            <Reveal
               key={step.title}
-              className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-2xl p-6 shadow-lg"
+              delay={(i % 2) * 100}
+              className="lift border border-white/40 bg-white/35 backdrop-blur-xl rounded-2xl p-6 shadow-lg"
             >
               <h3 className="font-extrabold text-text text-lg">{step.title}</h3>
               <p className="mt-2 text-sm text-muted leading-relaxed">{step.text}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -209,7 +228,7 @@ function ServicesGrid() {
       icon: Sparkles,
       title: "Spălare covoare",
       badge: "13 lei/mp",
-      text: "Curățare în profunzime, la metru pătrat. Prețul actual este 13 lei/mp, redus de la 15 lei/mp.",
+      text: "Curățare în profunzime, la metru pătrat. Spălare covoare: 13 lei/mp.",
       href: "/tarife",
       link: "Vezi tarifele",
     },
@@ -234,16 +253,16 @@ function ServicesGrid() {
   return (
     <section className="mt-10 md:mt-16">
       <div className="container-app">
-        <div className="text-center">
+        <Reveal className="text-center">
           <h2 className="section-title text-3xl md:text-4xl">Serviciile noastre</h2>
           <p className="section-subtitle mt-3">
-            Spălarea covoarelor are preț fix. Canapelele, saltelele și mocheta se fac la cerere, cu ofertă după material.
+            Spălarea covoarelor are preț fix. Canapelele, saltelele și mocheta se fac la cerere, cu preț stabilit după material.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-          {items.map((it) => (
-            <div key={it.title} className="service-card">
+          {items.map((it, i) => (
+            <Reveal key={it.title} delay={i * 100} className="service-card">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className="service-ic">
@@ -261,7 +280,7 @@ function ServicesGrid() {
               <Link href={it.href} className="service-link">
                 {it.link} <span aria-hidden>→</span>
               </Link>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -273,7 +292,7 @@ function WhyAniva() {
   const reasons = [
     {
       title: "Preț scris, nu estimare vagă",
-      text: "13 lei/mp pentru spălare, redus de la 15 lei/mp. Festonatul, dacă este nevoie, este 13 lei/ml. Îți spunem totalul înainte să începem.",
+      text: "Spălare covoare: 13 lei/mp. Festonarea, dacă este nevoie, este 13 lei/ml. Îți spunem totalul înainte să începem.",
     },
     {
       title: "Ridicare gratuită, cu minim clar",
@@ -292,21 +311,22 @@ function WhyAniva() {
   return (
     <section className="mt-10 md:mt-16">
       <div className="container-app">
-        <div className="text-center">
+        <Reveal className="text-center">
           <h2 className="section-title text-3xl md:text-4xl">De ce să alegi ANIVA</h2>
           <p className="section-subtitle mt-3 max-w-3xl mx-auto">
             Spălătorie de covoare în Brașov, cu ridicare de la adresă și aducere înapoi. Prețul pe metru pătrat este același în tot orașul.
           </p>
-        </div>
+        </Reveal>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
-          {reasons.map((reason) => (
-            <div
+          {reasons.map((reason, i) => (
+            <Reveal
               key={reason.title}
-              className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-2xl p-6 shadow-lg"
+              delay={(i % 2) * 100}
+              className="lift border border-white/40 bg-white/35 backdrop-blur-xl rounded-2xl p-6 shadow-lg"
             >
               <h3 className="font-extrabold text-text text-lg">{reason.title}</h3>
               <p className="mt-2 text-sm text-muted leading-relaxed">{reason.text}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -319,7 +339,7 @@ function ZonesServed() {
     { href: "/zone-deservite", label: "Toate zonele deservite" },
     { href: "/spalatorie-covoare-bartolomeu", label: "Bartolomeu" },
     { href: "/spalatorie-covoare-astra", label: "Astra" },
-    { href: "/spalatorie-covoare-10-lei-mp-brasov", label: "Preț accesibil, 13 lei/mp" },
+    { href: "/spalatorie-covoare-10-lei-mp-brasov", label: "Spălare covoare: 13 lei/mp" },
     { href: "/tarife", label: "Listă de tarife" },
     { href: "/curatare-canapele-brasov", label: "Curățare canapele" },
     { href: "/curatare-saltele-brasov", label: "Curățare saltele" },
@@ -393,9 +413,6 @@ function QuickPricing() {
                     <div className="price-pill">
                       <span className="font-bold text-brand">13 lei/mp</span>
                     </div>
-                    <div className="mt-1 text-xs text-muted">
-                      redus de la <del>15 lei/mp</del>
-                    </div>
                   </div>
                 </div>
 
@@ -407,9 +424,6 @@ function QuickPricing() {
                   <div className="text-right">
                     <div className="price-pill">
                       <span className="font-bold text-brand">13 lei/ml</span>
-                    </div>
-                    <div className="mt-1 text-xs text-muted">
-                      redus de la <del>15 lei/ml</del>
                     </div>
                   </div>
                 </div>
@@ -429,7 +443,7 @@ function QuickPricing() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
+            <div className="img-zoom relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
               <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent z-10" />
               <Image
                 src="/images/extra-ambient.jpg.png"
@@ -445,6 +459,26 @@ function QuickPricing() {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function PriceCalculatorSection() {
+  return (
+    <section id="calculator" className="mt-10 md:mt-16" aria-labelledby="calculator-titlu">
+      <div className="container-app">
+        <Reveal className="text-center">
+          <h2 id="calculator-titlu" className="section-title text-3xl md:text-4xl">
+            Calculează prețul covoarelor
+          </h2>
+          <p className="section-subtitle mt-3 max-w-2xl mx-auto">
+            Spălare 13 lei/mp, festonare 13 lei/ml. Adaugă dimensiunile covoarelor și vezi pe loc cât costă.
+          </p>
+        </Reveal>
+        <Reveal className="mt-8" delay={100}>
+          <PriceCalculator />
+        </Reveal>
       </div>
     </section>
   );
@@ -480,7 +514,7 @@ function CTA() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
+            <div className="img-zoom relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
               <div className="relative h-[300px] w-full">
                 <Image
                   src="/images/ridicare.png"
@@ -509,31 +543,58 @@ export default function Home() {
       <Header />
 
       <section className="hero">
+        <div className="hero-bg" aria-hidden="true" />
+        <div className="hero-wash" aria-hidden="true" />
+        <div className="hero-drops" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
         <div className="container-app hero-content">
           <div className="max-w-[640px] text-left">
+            <div className="hero-chips mb-5">
+              <span className="hero-chip">
+                <Truck aria-hidden /> Ridicare gratuită
+              </span>
+              <span className="hero-chip">
+                <Clock aria-hidden /> Gata în 3 zile lucrătoare
+              </span>
+              <span className="hero-chip">
+                <HomeIcon aria-hidden /> Preluare de la domiciliu
+              </span>
+            </div>
+
             <h1 className="section-title hero-title">
-              Spălătorie covoare Brașov – spălare profesională cu ridicare și livrare gratuită
+              {heroTitleWords.map((word, i) => (
+                <span key={`${word}-${i}`}>
+                  <span className="hero-word" style={{ animationDelay: `${i * 40}ms` }}>
+                    {word}
+                  </span>
+                  {i < heroTitleWords.length - 1 ? "\u00A0" : null}
+                </span>
+              ))}
             </h1>
 
-            <p className="section-subtitle hero-subtitle">
-              Spălăm covoare în Brașov la 13 lei/mp, redus de la 15 lei/mp. Ridicarea și livrarea sunt gratuite, iar covorul este gata în 3 zile lucrătoare.
+            <p className="section-subtitle hero-subtitle hero-rise">
+              Spălăm covoare în Brașov la <PriceCount /> lei/mp. Ridicarea și livrarea sunt gratuite, iar covorul este gata în 3 zile lucrătoare.
             </p>
 
-            <p className="mt-4 text-sm md:text-base text-muted leading-relaxed max-w-xl">
-              Atelierul este pe Șos. Cristianului nr. 11. Comanzi online sau suni la 0759 158 914. Igienizarea și uscarea sunt incluse în prețul pe metru pătrat.
+            <p className="hero-rise hero-rise-late mt-4 text-sm md:text-base text-muted leading-relaxed max-w-xl">
+              Venim noi după covoare, le spălăm în atelierul nostru din Brașov și ți le aducem înapoi curate și uscate. Comanzi online sau suni la 0759 158 914. Igienizarea și uscarea sunt incluse în prețul pe metru pătrat.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-start gap-4">
-              <Button variant="primary" href="/comanda-online" className="btn-cta">
-                Comandă online
+            <div className="hero-cta mt-8 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
+              <Button variant="primary" href="tel:0759158914" className="btn-cta cta-suna">
+                Sună acum: 0759 158 914
               </Button>
-
-              <div className="flex flex-col gap-1">
-                <Button variant="ghost" href="tel:0759158914">
-                  Sună acum
-                </Button>
-                <p className="text-xs text-muted">Spălătorie covoare Brașov</p>
-              </div>
+              <Button variant="ghost" href="#calculator" className="cta-ghost-in">
+                <Calculator className="h-4 w-4" aria-hidden /> Calculează prețul
+              </Button>
+              <Link href="/comanda-online" className="cta-link-in text-sm font-bold text-text underline underline-offset-4">
+                sau comandă online
+              </Link>
             </div>
           </div>
         </div>
@@ -543,6 +604,8 @@ export default function Home() {
         <ProcessWithImages />
       </div>
 
+      <HowItWorks />
+      <PriceCalculatorSection />
       <ProcessExplained />
       <ServicesGrid />
       <WhyAniva />

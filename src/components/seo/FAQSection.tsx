@@ -10,7 +10,7 @@ interface FAQSectionProps {
 
 export default function FAQSection({
   faqs,
-  title = 'Intrebari frecvente',
+  title = 'Întrebări frecvente',
 }: FAQSectionProps) {
   const schema = {
     '@context': 'https://schema.org',
@@ -34,15 +34,15 @@ export default function FAQSection({
       <section className="mt-10 md:mt-14">
         <div className="container-app">
           <h2 className="section-title text-2xl md:text-3xl text-center mb-8">{title}</h2>
-          <div className="space-y-4 max-w-3xl mx-auto">
+          <div className="space-y-3 max-w-3xl mx-auto">
             {faqs.map((f, i) => (
-              <div
-                key={i}
-                className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-2xl p-6 shadow-lg"
-              >
-                <div className="font-extrabold text-text mb-2">{f.question}</div>
-                <div className="text-sm text-muted leading-relaxed">{f.answer}</div>
-              </div>
+              <details key={i} className="faq-item" open={i === 0}>
+                <summary className="faq-q">
+                  <span>{f.question}</span>
+                  <span className="faq-chevron" aria-hidden />
+                </summary>
+                <div className="faq-a">{f.answer}</div>
+              </details>
             ))}
           </div>
         </div>
