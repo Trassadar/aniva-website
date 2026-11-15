@@ -11,6 +11,21 @@ import { BadgeCheck, Clock, Shield, Truck, Sparkles, Droplets, Home as HomeIcon,
 import Reveal from "@/components/interactive/Reveal";
 import HowItWorks from "@/components/interactive/HowItWorks";
 import PriceCalculator from "@/components/interactive/PriceCalculator";
+import PriceCount from "@/components/interactive/PriceCount";
+
+const heroTitleWords = [
+  "Spălătorie",
+  "covoare",
+  "Brașov",
+  "–",
+  "spălare",
+  "profesională",
+  "cu",
+  "ridicare",
+  "și",
+  "livrare",
+  "gratuită",
+];
 
 export const metadata = genMeta({
   title: "Spălătorie Covoare Brașov | 13 lei/mp, Ridicare Gratuită | ANIVA",
@@ -528,8 +543,17 @@ export default function Home() {
       <Header />
 
       <section className="hero">
+        <div className="hero-bg" aria-hidden="true" />
+        <div className="hero-wash" aria-hidden="true" />
+        <div className="hero-drops" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
         <div className="container-app hero-content">
-          <div className="hero-anim max-w-[640px] text-left">
+          <div className="max-w-[640px] text-left">
             <div className="hero-chips mb-5">
               <span className="hero-chip">
                 <Truck aria-hidden /> Ridicare gratuită
@@ -543,25 +567,32 @@ export default function Home() {
             </div>
 
             <h1 className="section-title hero-title">
-              Spălătorie covoare Brașov – spălare profesională cu ridicare și livrare gratuită
+              {heroTitleWords.map((word, i) => (
+                <span key={`${word}-${i}`}>
+                  <span className="hero-word" style={{ animationDelay: `${i * 40}ms` }}>
+                    {word}
+                  </span>
+                  {i < heroTitleWords.length - 1 ? "\u00A0" : null}
+                </span>
+              ))}
             </h1>
 
-            <p className="section-subtitle hero-subtitle">
-              Spălăm covoare în Brașov la 13 lei/mp. Ridicarea și livrarea sunt gratuite, iar covorul este gata în 3 zile lucrătoare.
+            <p className="section-subtitle hero-subtitle hero-rise">
+              Spălăm covoare în Brașov la <PriceCount /> lei/mp. Ridicarea și livrarea sunt gratuite, iar covorul este gata în 3 zile lucrătoare.
             </p>
 
-            <p className="mt-4 text-sm md:text-base text-muted leading-relaxed max-w-xl">
+            <p className="hero-rise hero-rise-late mt-4 text-sm md:text-base text-muted leading-relaxed max-w-xl">
               Venim noi după covoare, le spălăm în atelierul nostru din Brașov și ți le aducem înapoi curate și uscate. Comanzi online sau suni la 0759 158 914. Igienizarea și uscarea sunt incluse în prețul pe metru pătrat.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
-              <Button variant="primary" href="tel:0759158914" className="btn-cta">
+            <div className="hero-cta mt-8 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4">
+              <Button variant="primary" href="tel:0759158914" className="btn-cta cta-suna">
                 Sună acum: 0759 158 914
               </Button>
-              <Button variant="ghost" href="#calculator">
+              <Button variant="ghost" href="#calculator" className="cta-ghost-in">
                 <Calculator className="h-4 w-4" aria-hidden /> Calculează prețul
               </Button>
-              <Link href="/comanda-online" className="text-sm font-bold text-text underline underline-offset-4">
+              <Link href="/comanda-online" className="cta-link-in text-sm font-bold text-text underline underline-offset-4">
                 sau comandă online
               </Link>
             </div>
