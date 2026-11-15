@@ -45,7 +45,7 @@ const faqs = [
   {
     question: 'Prețul pe metru pătrat se schimbă după cartier?',
     answer:
-      'Nu. Spălarea este 13 lei/mp peste tot, redus de la 15 lei/mp. Se schimbă doar comanda minimă: 6 mp (78 lei) în Brașov și în localitățile apropiate, 25 mp (325 lei) pe rutele mai lungi.',
+      'Nu. Spălarea covoarelor este 13 lei/mp peste tot. Se schimbă doar comanda minimă: 6 mp (78 lei) în Brașov și în localitățile apropiate, 25 mp (325 lei) pe rutele mai lungi.',
   },
   {
     question: 'De ce Bartolomeu și Astra au pagină separată?',
@@ -87,8 +87,7 @@ export default function ZoneDeservite() {
                 <p>
                   ANIVA ridică covoarele de la adresă și le spală în atelierul de pe{' '}
                   <strong className="text-text">Șos. Cristianului nr. 11, Brașov</strong>.
-                  Prețul de spălare este <strong className="text-text">13 lei/mp</strong>, redus de la{' '}
-                  <del>15 lei/mp</del>, indiferent de cartier. Termenul obișnuit este de 3 zile lucrătoare.
+                  Prețul de spălare este <strong className="text-text">13 lei/mp</strong>, indiferent de cartier. Termenul obișnuit este de 3 zile lucrătoare.
                 </p>
                 <p>
                   Nu ținem un calendar public de „ziua cartierului”. Comanda se programează online
@@ -101,7 +100,7 @@ export default function ZoneDeservite() {
             <div className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-[32px] p-6 md:p-10 shadow-xl">
               <h2 className="font-extrabold text-text text-2xl">Brașov, minim 6 mp (78 lei)</h2>
               <p className="mt-3 text-muted leading-relaxed">
-                Redus de la <del>90 lei</del>. Include cartierele de mai jos. Două dintre ele au pagină
+                Include cartierele de mai jos. Două dintre ele au pagină
                 proprie, cu detalii de ridicare:{' '}
                 <Link href="/spalatorie-covoare-bartolomeu" className="underline underline-offset-4 text-text font-semibold">
                   Bartolomeu
@@ -136,7 +135,7 @@ export default function ZoneDeservite() {
             <div className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-[32px] p-6 md:p-10 shadow-xl">
               <h2 className="font-extrabold text-text text-2xl">Localități apropiate, tot 6 mp (78 lei)</h2>
               <p className="mt-3 text-muted leading-relaxed">
-                Aceeași grilă ca în Brașov, redusă de la <del>90 lei</del>. Sânpetru este grupat la tarife
+                Aceeași grilă ca în Brașov. Sânpetru este grupat la tarife
                 împreună cu Brașov și Stupini; Codlea, Săcele, Hărman, Ghimbav și Cristian au același minim.
               </p>
               <ul className="mt-4 flex flex-wrap gap-2">
@@ -154,7 +153,7 @@ export default function ZoneDeservite() {
             <div className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-[32px] p-6 md:p-10 shadow-xl">
               <h2 className="font-extrabold text-text text-2xl">Rute mai lungi, minim 25 mp (325 lei)</h2>
               <p className="mt-3 text-muted leading-relaxed">
-                Redus de la <del>375 lei</del>. Prețul pe metru pătrat rămâne 13 lei. Minimul acoperă drumul.
+                Prețul pe metru pătrat este 13 lei. Minimul acoperă drumul.
                 25 mp × 13 lei = 325 lei.
               </p>
               <ul className="mt-4 flex flex-wrap gap-2">
@@ -180,7 +179,7 @@ export default function ZoneDeservite() {
                 Exemplele de calcul pentru 6 mp, 12 mp și pentru un covor sub minim sunt pe pagina de tarife.
                 Diferența dintre metru pătrat și metru liniar, la festonat, este explicată și pe pagina de{' '}
                 <Link href="/spalatorie-covoare-10-lei-mp-brasov" className="underline underline-offset-4 text-text">
-                  preț accesibil
+                  preț de 13 lei/mp
                 </Link>
                 .
               </p>

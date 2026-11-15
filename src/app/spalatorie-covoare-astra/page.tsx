@@ -71,11 +71,10 @@ export default function SpalatorieAstra() {
                   covoare mici din același apartament, nu un singur covor mare dintr-o casă.
                 </p>
                 <p>
-                  Pentru că Astra este în Brașov, minimul este <strong className="text-text">6 mp (78 lei)</strong>,
-                  redus de la <del>90 lei</del>. Săcele, care începe imediat după cartier, are același
+                  Pentru că Astra este în Brașov, minimul este <strong className="text-text">6 mp (78 lei)</strong>.
+                  Săcele, care începe imediat după cartier, are același
                   minim de 6 mp. Dacă nu ești sigur dacă adresa este în Astra sau deja în Săcele, prețul pe metru
-                  pătrat nu se schimbă: spălarea rămâne 13 lei,
-                  redus de la <del>15 lei/mp</del>.
+                  pătrat nu se schimbă: spălarea este 13 lei/mp.
                 </p>
                 <p>
                   Cum se adună suprafața într-un apartament tipic. Covor de dormitor 1,5×2 m = 3 mp.
@@ -96,7 +95,7 @@ export default function SpalatorieAstra() {
                   <Link href="/curatare-mocheta-brasov" className="underline underline-offset-4 text-text">
                     pagină separată
                   </Link>
-                  , cu ofertă la cerere, nu tariful de 13 lei/mp. Festonatul marginii, dacă este
+                  , cu preț la cerere, nu tariful de 13 lei/mp. Festonarea marginii, dacă este
                   nevoie, este 13 lei pe metru liniar și se confirmă separat.
                 </p>
                 <p>

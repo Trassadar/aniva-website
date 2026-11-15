@@ -23,7 +23,7 @@ const homeFaqs = [
   {
     question: "Cât costă spălatul covoarelor în Brașov?",
     answer:
-      "Spălarea costă 13 lei pe metru pătrat, redus de la 15 lei/mp. Un covor de 3×4 m are 12 mp și costă 156 lei. Orice covor sub 1 mp se tarifează ca 1 mp. Festonatul este un serviciu separat: 13 lei pe metru liniar, redus de la 15 lei/ml. Lista completă și exemplele sunt pe pagina de tarife.",
+      "Spălarea covoarelor costă 13 lei/mp. Un covor de 3×4 m are 12 mp și costă 156 lei. Orice covor sub 1 mp se tarifează ca 1 mp. Festonarea este un serviciu separat: 13 lei/ml. Lista completă și exemplele sunt pe pagina de tarife.",
   },
   {
     question: "Ridicarea și livrarea sunt gratuite?",
@@ -38,7 +38,7 @@ const homeFaqs = [
   {
     question: "Mai există prețul de 10 lei/mp?",
     answer:
-      "Nu. Oferta de 10 lei/mp nu mai este valabilă. Prețul actual, pe tot site-ul, este 13 lei/mp. Pagina despre prețul accesibil explică tariful de acum și diferența dintre metru pătrat și metru liniar.",
+      "Nu. Prețul de 10 lei/mp nu există. Spălarea covoarelor costă 13 lei/mp, pe tot site-ul. Pagina despre preț explică tariful și diferența dintre metru pătrat și metru liniar.",
   },
   {
     question: "Cum se măsoară covorul?",
@@ -58,7 +58,7 @@ const homeFaqs = [
   {
     question: "Curățați și canapele, saltele sau mochetă?",
     answer:
-      "Spălarea covoarelor are preț fix, 13 lei/mp. Curățarea canapelelor, a saltelelor și a mochetei se face la cerere, cu ofertă după material, pentru că nu se tarifează la metru pătrat ca un covor. Paginile dedicate explică fiecare serviciu.",
+      "Spălarea covoarelor are preț fix, 13 lei/mp. Curățarea canapelelor, a saltelelor și a mochetei se face la cerere, cu preț stabilit după material, pentru că nu se tarifează la metru pătrat ca un covor. Paginile dedicate explică fiecare serviciu.",
   },
 ];
 
@@ -213,7 +213,7 @@ function ServicesGrid() {
       icon: Sparkles,
       title: "Spălare covoare",
       badge: "13 lei/mp",
-      text: "Curățare în profunzime, la metru pătrat. Prețul actual este 13 lei/mp, redus de la 15 lei/mp.",
+      text: "Curățare în profunzime, la metru pătrat. Spălare covoare: 13 lei/mp.",
       href: "/tarife",
       link: "Vezi tarifele",
     },
@@ -241,7 +241,7 @@ function ServicesGrid() {
         <Reveal className="text-center">
           <h2 className="section-title text-3xl md:text-4xl">Serviciile noastre</h2>
           <p className="section-subtitle mt-3">
-            Spălarea covoarelor are preț fix. Canapelele, saltelele și mocheta se fac la cerere, cu ofertă după material.
+            Spălarea covoarelor are preț fix. Canapelele, saltelele și mocheta se fac la cerere, cu preț stabilit după material.
           </p>
         </Reveal>
 
@@ -277,7 +277,7 @@ function WhyAniva() {
   const reasons = [
     {
       title: "Preț scris, nu estimare vagă",
-      text: "13 lei/mp pentru spălare, redus de la 15 lei/mp. Festonatul, dacă este nevoie, este 13 lei/ml. Îți spunem totalul înainte să începem.",
+      text: "Spălare covoare: 13 lei/mp. Festonarea, dacă este nevoie, este 13 lei/ml. Îți spunem totalul înainte să începem.",
     },
     {
       title: "Ridicare gratuită, cu minim clar",
@@ -324,7 +324,7 @@ function ZonesServed() {
     { href: "/zone-deservite", label: "Toate zonele deservite" },
     { href: "/spalatorie-covoare-bartolomeu", label: "Bartolomeu" },
     { href: "/spalatorie-covoare-astra", label: "Astra" },
-    { href: "/spalatorie-covoare-10-lei-mp-brasov", label: "Preț accesibil, 13 lei/mp" },
+    { href: "/spalatorie-covoare-10-lei-mp-brasov", label: "Spălare covoare: 13 lei/mp" },
     { href: "/tarife", label: "Listă de tarife" },
     { href: "/curatare-canapele-brasov", label: "Curățare canapele" },
     { href: "/curatare-saltele-brasov", label: "Curățare saltele" },
@@ -398,9 +398,6 @@ function QuickPricing() {
                     <div className="price-pill">
                       <span className="font-bold text-brand">13 lei/mp</span>
                     </div>
-                    <div className="mt-1 text-xs text-muted">
-                      redus de la <del>15 lei/mp</del>
-                    </div>
                   </div>
                 </div>
 
@@ -412,9 +409,6 @@ function QuickPricing() {
                   <div className="text-right">
                     <div className="price-pill">
                       <span className="font-bold text-brand">13 lei/ml</span>
-                    </div>
-                    <div className="mt-1 text-xs text-muted">
-                      redus de la <del>15 lei/ml</del>
                     </div>
                   </div>
                 </div>
@@ -553,7 +547,7 @@ export default function Home() {
             </h1>
 
             <p className="section-subtitle hero-subtitle">
-              Spălăm covoare în Brașov la 13 lei/mp, redus de la 15 lei/mp. Ridicarea și livrarea sunt gratuite, iar covorul este gata în 3 zile lucrătoare.
+              Spălăm covoare în Brașov la 13 lei/mp. Ridicarea și livrarea sunt gratuite, iar covorul este gata în 3 zile lucrătoare.
             </p>
 
             <p className="mt-4 text-sm md:text-base text-muted leading-relaxed max-w-xl">

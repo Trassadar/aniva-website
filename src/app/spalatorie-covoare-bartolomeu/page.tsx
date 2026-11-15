@@ -25,7 +25,7 @@ const faqs = [
   {
     question: 'Prețul este altul decât în restul Brașovului?',
     answer:
-      'Nu. Spălarea este 13 lei/mp, redus de la 15 lei/mp, la fel ca în Centru sau în Astra. Un covor de 2×3 m dintr-un living de bloc costă 6 mp × 13 lei = 78 lei, exact minimul.',
+      'Nu. Spălarea covoarelor este 13 lei/mp, la fel ca în Centru sau în Astra. Un covor de 2×3 m dintr-un living de bloc costă 6 mp × 13 lei = 78 lei, exact minimul.',
   },
   {
     question: 'Unde este atelierul față de Bartolomeu?',
@@ -74,8 +74,8 @@ export default function SpalatorieBartolomeu() {
                   Atelierul nu este în Bartolomeu. Este pe{' '}
                   <strong className="text-text">Șos. Cristianului nr. 11</strong>, pe șoseaua către
                   Cristian. Ridicarea din Bartolomeu traversează Brașovul. Pentru că adresa este în
-                  municipiu, comanda minimă rămâne cea de Brașov: <strong className="text-text">6 mp, adică 78 lei</strong>,
-                  redus de la <del>90 lei</del>. Nu plătești drumul peste cei{' '}
+                  municipiu, comanda minimă rămâne cea de Brașov: <strong className="text-text">6 mp, adică 78 lei</strong>.
+                  Nu plătești drumul peste cei{' '}
                   <strong className="text-text">13 lei/mp</strong>.
                 </p>
                 <p>

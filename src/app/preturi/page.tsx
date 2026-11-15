@@ -182,7 +182,6 @@ export default function Preturi() {
                   >
                     <div className="flex flex-col items-center gap-1">
                       <span className="font-bold text-3xl">13 RON/mp</span>
-                      <span className="text-lg line-through opacity-60">15 RON/mp</span>
                     </div>
                   </motion.div>
                   <p className="text-xl text-secondary">Pret standard pentru spalare covoare</p>
@@ -197,7 +196,6 @@ export default function Preturi() {
                   <div className="flex justify-between items-center py-4 border-b border-custom">
                     <span className="text-primary font-medium text-lg">Spalare standard covoare</span>
                     <div className="flex items-center gap-2">
-                      <span className="text-sm line-through opacity-60 text-secondary">15 RON/mp</span>
                       <span className="text-gold font-bold text-xl">13 RON/mp</span>
                     </div>
                   </div>
