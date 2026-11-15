@@ -485,7 +485,7 @@ export default function Comanda() {
                         <option value="">Alege interval</option>
                         <option value="09:00-12:00">09:00 - 12:00</option>
                         <option value="12:00-15:00">12:00 - 15:00</option>
-                        <option value="15:00-18:00">15:00 - 18:00</option>
+                        <option value="15:00-17:00">15:00 - 17:00</option>
                       </select>
                     </div>
 

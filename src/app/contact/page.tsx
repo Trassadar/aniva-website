@@ -87,11 +87,11 @@ export default function Contact() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-4 bg-surface2 rounded-2xl ring-1 ring-border/70">
                     <p className="font-extrabold text-text">Luni - Vineri</p>
-                    <p className="text-muted">08:00 - 18:00</p>
+                    <p className="text-muted">08:00 - 17:00</p>
                   </div>
                   <div className="flex justify-between items-center p-4 bg-surface2 rounded-2xl ring-1 ring-border/70">
                     <p className="font-extrabold text-text">Sambata</p>
-                    <p className="text-muted">09:00 - 13:00</p>
+                    <p className="text-muted">08:00 - 13:00</p>
                   </div>
                   <div className="flex justify-between items-center p-4 bg-surface2 rounded-2xl ring-1 ring-border/70">
                     <p className="font-extrabold text-text">Duminica</p>

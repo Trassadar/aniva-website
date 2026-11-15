@@ -65,7 +65,7 @@ const faqs = [
   {
     question: 'Trebuie să aduc eu covorul la atelier?',
     answer:
-      'Nu. Ridicăm de la adresă și îl aducem înapoi, gratuit, dacă este atins minimul. Atelierul este pe Șos. Cristianului nr. 11, Brașov. Poți și să îl aduci tu, în program: luni–vineri 08:00–18:00, sâmbătă 09:00–13:00.',
+      'Nu. Ridicăm de la adresă și îl aducem înapoi, gratuit, dacă este atins minimul. Atelierul este pe Șos. Cristianului nr. 11, Brașov. Poți și să îl aduci tu, în program: luni–vineri 08:00–17:00, sâmbătă 08:00–13:00. Duminica este închis.',
   },
 ];
 

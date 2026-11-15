@@ -30,7 +30,7 @@ const homeFaqs = [
   {
     question: "În cât timp primesc covorul înapoi?",
     answer:
-      "Termenul obișnuit este de 3 zile lucrătoare de la ridicare. Te anunțăm înainte de livrare, ca să fii acasă. Programul atelierului este luni–vineri 08:00–18:00 și sâmbătă 09:00–13:00. Duminica este închis.",
+      "Termenul obișnuit este de 3 zile lucrătoare de la ridicare. Te anunțăm înainte de livrare, ca să fii acasă. Programul atelierului este luni–vineri 08:00–17:00 și sâmbătă 08:00–13:00. Duminica este închis.",
   },
   {
     question: "Mai există prețul de 10 lei/mp?",
@@ -476,7 +476,7 @@ function CTA() {
 
               <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/60 border border-white/60 px-3 py-2 text-xs md:text-sm text-text shadow-sm">
                 <Clock className="h-4 w-4" />
-                <span>Luni–vineri 08:00–18:00, sâmbătă 09:00–13:00</span>
+                <span>Luni–vineri 08:00–17:00, sâmbătă 08:00–13:00</span>
               </div>
             </div>
 

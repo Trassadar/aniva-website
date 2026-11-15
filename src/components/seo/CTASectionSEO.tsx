@@ -29,7 +29,7 @@ export default function CTASectionSEO() {
             </a>
           </div>
           <p className="mt-6 text-xs text-muted">
-            Program: luni–vineri 08:00–18:00 · sâmbătă 09:00–13:00
+            Program: luni–vineri 08:00–17:00 · sâmbătă 08:00–13:00 · duminică închis
           </p>
         </div>
       </div>
