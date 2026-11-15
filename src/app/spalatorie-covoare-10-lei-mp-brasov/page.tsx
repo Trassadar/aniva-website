@@ -1,3 +1,8 @@
+// Pagina de pret accesibil. Pastreaza URL-ul /spalatorie-covoare-10-lei-mp-brasov.
+// Contine: SpalatoriePretAccesibil.
+// Nu mai exista oferta de 10 lei/mp. Pretul actual este 13 lei/mp.
+
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { generateMetadata } from '@/lib/seo';
@@ -8,165 +13,160 @@ import FAQSection from '@/components/seo/FAQSection';
 import CTASectionSEO from '@/components/seo/CTASectionSEO';
 
 export const metadata = generateMetadata({
-  title: 'Spalatorie Covoare Brasov de la 10 Lei/mp – Oferta ANIVA',
+  title: 'Spălare covoare Brașov ieftină | 13 lei/mp, ridicare gratuită | ANIVA',
   description:
-    'ANIVA ofera promotii de la 10 lei/mp pentru spalarea covoarelor in Brasov. Pret standard 13 lei/mp. Calitate profesionala completa, fara compromisuri. Suna pentru oferta actuala.',
+    'Cauți o spălare de covoare ieftină în Brașov? Prețul actual este 13 lei/mp, redus de la 15 lei/mp, cu ridicare și livrare gratuită. Oferta de 10 lei/mp nu mai există.',
   path: '/spalatorie-covoare-10-lei-mp-brasov',
 });
 
 const benefits = [
   {
-    icon: '💎',
-    title: 'Calitate profesionala completa',
-    desc: 'Indiferent de pretul platit, procesul ANIVA ramane identic: 6 etape complete, detergenti certificati, uscare controlata.',
+    icon: '13',
+    title: '13 lei/mp, prețul de acum',
+    desc: 'Spălarea costă 13 lei pe metru pătrat în Brașov și în localitățile deservite. Este prețul redus de la 15 lei/mp. Nu există un tarif paralel de 10 lei.',
   },
   {
-    icon: '🔍',
-    title: 'Evaluare personalizata',
-    desc: 'Fiecare covor este evaluat individual. Pretul final depinde de suprafata, tipul de material si gradul de murdarie.',
+    icon: 'mp',
+    title: 'Metru pătrat, nu metru liniar',
+    desc: 'Spălarea se măsoară în mp (lungime × lățime). Festonatul, dacă marginea trebuie refăcută, se măsoară în ml, pe contur, la 13 lei/ml.',
   },
   {
-    icon: '📢',
-    title: 'Promotii periodice',
-    desc: 'Urmareste ofertele noastre sezoniere si promotiile speciale pentru comenzi mari sau clienti fideli.',
+    icon: '78',
+    title: 'Exemplu la minimul din Brașov',
+    desc: 'Un covor de 2×3 m are 6 mp × 13 lei = 78 lei. Este exact comanda minimă din Brașov. Sub acest total se taxează tot 78 lei.',
   },
   {
-    icon: '🚚',
-    title: 'Ridicare si livrare incluse',
-    desc: 'Chiar si in perioadele cu oferte speciale, ridicarea si livrarea sunt gratuite in Brasov.',
+    icon: '0',
+    title: 'Ridicarea nu se adaugă la preț',
+    desc: 'Ridicarea și livrarea sunt gratuite dacă este atinsă comanda minimă a zonei. Nu plătești drumul peste cei 13 lei/mp.',
   },
   {
-    icon: '⏱️',
-    title: 'Acelasi termen de livrare',
-    desc: '3 zile lucratoare indiferent de pret. Nu reducem calitatea sau viteza pentru a reduce costul.',
+    icon: '3',
+    title: 'Același termen',
+    desc: '3 zile lucrătoare, cu uscare controlată. Prețul de 13 lei nu taie pași din spălare.',
   },
   {
-    icon: '🤝',
-    title: 'Transparenta totala',
-    desc: 'Inainte de orice curatare, confirmi pretul final. Fara surprize, fara costuri nediscutate.',
+    icon: '✓',
+    title: 'Totalul se confirmă înainte',
+    desc: 'După dimensiunile pe care le trimiți îți spunem suma. Dacă la atelier suprafața diferă, te sunăm înainte să spălăm.',
   },
 ];
 
 const faqs = [
   {
-    question: 'ANIVA ofera intr-adevar preturi de la 10 lei/mp?',
+    question: 'Mai există prețul de 10 lei/mp?',
     answer:
-      'Da, ANIVA are periodic promotii si oferte speciale in care pretul poate incepe de la 10 lei/mp. Pretul standard este de 13 lei/mp. Ofertele speciale pot depinde de perioada, volumul comenzii sau alte conditii specifice. Suna-ne sau scrie-ne pe WhatsApp pentru a afla ofertele disponibile in momentul de fata.',
+      'Nu. Oferta de 10 lei/mp nu mai este valabilă. Prețul actual este 13 lei/mp pentru spălare, redus de la 15 lei/mp, în Brașov și în localitățile deservite.',
   },
   {
-    question: 'De ce variaza pretul? Ce influenteaza costul final?',
+    question: 'De ce adresa paginii încă conține „10 lei”?',
     answer:
-      'Pretul poate varia in functie de mai multi factori: suprafata totala a comenzii (comenzile mai mari beneficiaza uneori de tarife mai avantajoase), tipul de material al covorului, gradul de murdarie si daca sunt necesare tratamente suplimentare pentru pete dificile. Pretul standard de referinta este 13 lei/mp.',
+      'Adresa a rămas pentru cine caută o spălare ieftină de covoare în Brașov. Textul de pe pagină spune prețul real: 13 lei/mp, cu ridicare și livrare gratuită. Nu promovăm un tarif pe care nu îl mai practicăm.',
   },
   {
-    question: 'Calitatea curatarii este aceeasi indiferent de pret?',
+    question: 'Cum se calculează prețul?',
     answer:
-      'Absolut. Procesul ANIVA nu se schimba in functie de pret: toate cele 6 etape (inspectie, desprafuire, aspirare, spalare, stoarcere, uscare) sunt parcurse pentru fiecare covor. Detergentii utilizati sunt aceiasi, echipamentele sunt aceleasi, timpul de uscare este acelasi. Nu facem compromisuri la calitate.',
+      'Suprafața în metri pătrați (lungime × lățime) se înmulțește cu 13 lei. Exemplu: 3×4 m = 12 mp × 13 lei = 156 lei. Un covor sub 1 mp se tarifează ca 1 mp. Mai multe covoare din aceeași comandă se adună.',
   },
   {
-    question: 'Cum pot afla daca exista o oferta disponibila acum?',
+    question: 'Care este comanda minimă?',
     answer:
-      'Cel mai rapid este sa ne suni la 0759 158 914 sau sa ne scrii pe WhatsApp. Iti spunem imediat care sunt tarifele curente si daca exista promotii active. Poti si sa plasezi o comanda online – te contactam inainte de ridicare pentru a confirma pretul exact.',
+      'În Brașov, Stupini și Sânpetru, și în Codlea, Săcele, Hărman, Ghimbav și Cristian, minimul este 6 mp, adică 78 lei (redus de la 90 lei). În Prejmer, Poiana Brașov, Bran, Sinaia, Bușteni și Predeal, minimul este 25 mp, adică 325 lei (redus de la 375 lei). Sub minim se taxează minimul.',
   },
   {
-    question: 'Pretul de 10 lei/mp este disponibil pentru orice covor?',
+    question: 'Festonatul este tot 13 lei/mp?',
     answer:
-      'Pretul de la 10 lei/mp se aplica in anumite conditii promotionale. Pentru covoarele din materiale foarte delicate sau cu grade extreme de murdarie care necesita tratamente suplimentare, pretul poate fi diferit. In orice caz, confirman pretul inainte de a incepe curatarea.',
+      'Nu. Festonatul este 13 lei pe metru liniar (ml), redus de la 15 lei/ml. Se măsoară conturul, nu suprafața. Un covor de 2×3 m are 6 mp de spălat și, dacă se festonează tot conturul, 10 ml.',
   },
   {
-    question: 'Ridicarea si livrarea sunt gratuite si cand este o oferta?',
+    question: 'Ridicarea este inclusă în cei 13 lei?',
     answer:
-      'Da, ridicarea si livrarea sunt gratuite in Brasov si localitatile apropiate, indiferent de pretul per mp. Acesta este un beneficiu constant al serviciului ANIVA, nu un extra optional.',
+      'Da. Ridicarea și livrarea sunt gratuite în zonele deservite, dacă este atinsă comanda minimă. Nu se adaugă taxă de deplasare peste prețul pe metru pătrat.',
   },
   {
-    question: 'Cum pot fi sigur ca nu platesc mai mult decat am inteles initial?',
+    question: 'Unde văd toată lista de prețuri?',
     answer:
-      'Inainte de ridicarea covorului, iti comunicam pretul total estimat bazat pe dimensiunile declarate. Dupa inspectia covorului in atelier, daca pretul difera semnificativ (de exemplu din cauza unor tratamente suplimentare necesare), te contactam pentru confirmare. Nu incepem curatarea fara acordul tau.',
+      'Pe pagina de tarife sunt exemplele de calcul și minimele pe zone. Pentru programare folosești comanda online sau suni la 0759 158 914.',
   },
 ];
 
-export default function Spalatorie10LeiMpBrasov() {
+export default function SpalatoriePretAccesibil() {
   return (
     <>
       <Header />
       <main>
         <SEOPageHero
-          h1="Spalatorie Covoare Brasov de la 10 Lei/mp – Calitate Profesionala la Preturi Accesibile"
-          subtitle="ANIVA ofera periodic promotii de la 10 lei/mp pentru spalarea covoarelor in Brasov. Pretul standard este 13 lei/mp. Calitate si proces profesional complet, indiferent de oferta."
-          badge="Oferta de la 10 lei/mp · Standard 13 lei/mp"
+          h1="Spălare covoare în Brașov la preț accesibil: 13 lei/mp, cu ridicare gratuită"
+          subtitle="Prețul actual este 13 lei pe metru pătrat, redus de la 15 lei/mp. Oferta de 10 lei/mp nu mai există. Ridicarea și livrarea rămân gratuite."
+          badge="13 lei/mp · redus de la 15 lei/mp · fără tarif de 10 lei"
         />
 
-        {/* Main content */}
         <section className="mt-4 md:mt-6">
           <div className="container-app">
             <div className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-[32px] p-6 md:p-10 shadow-xl">
               <div className="max-w-3xl mx-auto space-y-5 text-muted leading-relaxed">
                 <p>
-                  Calitatea nu trebuie sa fie sinonima cu pretul exorbitant. La{' '}
-                  <strong className="text-text">ANIVA Brasov</strong>, credem ca orice familie
-                  din Brasov merita sa aiba covoarele curate, igienizate si proaspete – la preturi
-                  accesibile, fara compromisuri la calitatea serviciului.
+                  Dacă ai căutat o <strong className="text-text">spălare de covoare ieftină în Brașov</strong>,
+                  tariful pe care îl practicăm acum este{' '}
+                  <strong className="text-text">13 lei/mp</strong>. Suma este deja redusă de la{' '}
+                  <del>15 lei/mp</del>. Nu mai avem o promoție de 10 lei/mp și nu o afișăm ca și cum ar fi activă.
                 </p>
                 <p>
-                  Pretul nostru standard este de <strong className="text-text">13 lei/mp</strong>{' '}
-                  (redus deja de la 15 lei/mp). Periodic, organizam promotii in care pretul poate
-                  incepe <strong className="text-text">de la 10 lei/mp</strong> – pentru comenzi
-                  mai mari, in perioadele sezoniere sau pentru clientii fideli care revin cu
-                  covoare.
+                  La <strong className="text-text">ANIVA</strong> spălarea se face în atelier, pe{' '}
+                  <strong className="text-text">Șos. Cristianului nr. 11</strong>, nu în casă.
+                  Ridicăm covorul și îl aducem înapoi. Drumul nu se plătește separat, atât timp cât
+                  comanda atinge minimul zonei. În Brașov, minimul este 6 mp, adică 78 lei.
                 </p>
                 <p>
-                  Este important sa intelegem ca un pret mai mic nu inseamna niciodata un serviciu
-                  mai slab la ANIVA. Procesul de curatare are aceleasi 6 etape complete, aceiasi
-                  detergenti certificati si acelasi timp de uscare controlata in spatiul nostru
-                  dedicat. Ceea ce se schimba este marja comerciala, nu calitatea muncii.
+                  Un covor de living de 3×4 m are 12 mp × 13 lei = <strong className="text-text">156 lei</strong>,
+                  cu ridicare și livrare. Un covor de 2×3 m are 6 mp × 13 lei ={' '}
+                  <strong className="text-text">78 lei</strong>. Două carpete mici, de exemplu 1×2 m
+                  și 1,5×2 m, au împreună 5 mp. Pentru că sunt sub minimul de 6 mp din Brașov, comanda
+                  se taxează 78 lei, nu 65 lei.
                 </p>
 
-                {/* Price transparency box */}
                 <div className="mt-6 border border-white/50 bg-white/50 rounded-2xl p-6">
-                  <h2 className="font-extrabold text-text text-lg mb-4">Cum functioneaza pretul la ANIVA?</h2>
+                  <h2 className="font-extrabold text-text text-lg mb-4">Ce plătești, pe unități</h2>
                   <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <span className="text-green-600 font-bold mt-0.5">✓</span>
-                      <div>
-                        <span className="font-bold text-text">Pret standard: 13 lei/mp</span>
-                        <p className="text-sm text-muted mt-0.5">Valabil permanent, pentru orice comanda in Brasov.</p>
-                      </div>
+                    <div>
+                      <span className="font-bold text-text">Spălare: 13 lei/mp</span>
+                      <p className="text-sm text-muted mt-0.5">
+                        Metru pătrat. Redus de la <del>15 lei/mp</del>. Inclusiv desprăfuire, aspirare și uscare controlată.
+                      </p>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <span className="text-green-600 font-bold mt-0.5">✓</span>
-                      <div>
-                        <span className="font-bold text-text">Oferte promotionale: de la 10 lei/mp</span>
-                        <p className="text-sm text-muted mt-0.5">Disponibile periodic – suna sau scrie-ne pe WhatsApp pentru oferta actuala.</p>
-                      </div>
+                    <div>
+                      <span className="font-bold text-text">Festonat: 13 lei/ml</span>
+                      <p className="text-sm text-muted mt-0.5">
+                        Metru liniar, doar conturul. Redus de la <del>15 lei/ml</del>. Nu se confundă cu mp. Un covor de 2×3 m are 10 ml de contur.
+                      </p>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <span className="text-green-600 font-bold mt-0.5">✓</span>
-                      <div>
-                        <span className="font-bold text-text">Pretul variaza in functie de:</span>
-                        <p className="text-sm text-muted mt-0.5">Suprafata totala, tipul de material, gradul de murdarie si serviciile optionale alese.</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <span className="text-green-600 font-bold mt-0.5">✓</span>
-                      <div>
-                        <span className="font-bold text-text">Calitatea ramane aceeasi</span>
-                        <p className="text-sm text-muted mt-0.5">Indiferent de pret, procesul ANIVA in 6 pasi nu se schimba.</p>
-                      </div>
+                    <div>
+                      <span className="font-bold text-text">Ridicare și livrare: 0 lei</span>
+                      <p className="text-sm text-muted mt-0.5">
+                        Gratuite în zonele deservite, peste minimul de comandă. Minimele sunt pe{' '}
+                        <Link href="/tarife" className="underline underline-offset-4 text-text">pagina de tarife</Link>.
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <p>
-                  Pretul final este intotdeauna confirmat inainte de inceperea curatarii. Nu
-                  incepem niciun serviciu fara acordul tau explicit. Daca dimensiunile reale ale
-                  covorului sau starea sa necesita o ajustare a pretului estimat, te contactam
-                  inainte – nu dupa.
+                  Prețul pe metru pătrat este același în tot Brașovul. Ce se schimbă de la o localitate
+                  la alta este doar comanda minimă, pentru că drumul până la Predeal sau Bran nu este
+                  același cu drumul până în Astra sau Bartolomeu. Zonele și minimele sunt pe pagina{' '}
+                  <Link href="/zone-deservite" className="underline underline-offset-4 text-text">
+                    Zone deservite
+                  </Link>
+                  . Spălarea în sine, pașii și termenul de 3 zile lucrătoare sunt descrise pe{' '}
+                  <Link href="/" className="underline underline-offset-4 text-text">pagina principală</Link>.
                 </p>
                 <p>
-                  Vrei sa stii daca o oferta de la 10 lei/mp este disponibila in aceasta perioada?
-                  Suna-ne direct la <strong className="text-text">0759 158 914</strong> sau
-                  scrie-ne pe WhatsApp – iti raspundem in cateva minute cu tariful curent si
-                  disponibilitatea.
+                  Ca să afli totalul pentru covoarele tale, sună la{' '}
+                  <strong className="text-text">0759 158 914</strong> sau lasă dimensiunile în{' '}
+                  <Link href="/comanda-online" className="underline underline-offset-4 text-text">
+                    comanda online
+                  </Link>
+                  . Confirmăm suma înainte de spălare.
                 </p>
               </div>
             </div>
@@ -174,8 +174,8 @@ export default function Spalatorie10LeiMpBrasov() {
         </section>
 
         <ProcessSection />
-        <BenefitsSection benefits={benefits} title="De ce sa alegi ANIVA chiar si la pret standard?" />
-        <FAQSection faqs={faqs} title="Intrebari despre preturi si oferte" />
+        <BenefitsSection benefits={benefits} title="De ce 13 lei/mp este tariful de luat în calcul" />
+        <FAQSection faqs={faqs} title="Întrebări despre preț" />
         <CTASectionSEO />
       </main>
       <Footer />

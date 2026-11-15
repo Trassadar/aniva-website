@@ -93,6 +93,12 @@ export default function Header() {
               Tarife
             </Link>
             <Link
+              href="/zone-deservite"
+              className="text-sm font-semibold text-[rgba(27,20,16,0.8)] hover:text-[rgba(27,20,16,1)] transition"
+            >
+              Zone
+            </Link>
+            <Link
               href="/contact"
               className="text-sm font-semibold text-[rgba(27,20,16,0.8)] hover:text-[rgba(27,20,16,1)] transition"
             >
@@ -142,6 +148,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Tarife
+              </Link>
+              <Link
+                href="/zone-deservite"
+                className="py-2 text-sm font-semibold text-[rgba(27,20,16,0.8)] hover:text-[rgba(27,20,16,1)] transition"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Zone
               </Link>
               <Link
                 href="/contact"

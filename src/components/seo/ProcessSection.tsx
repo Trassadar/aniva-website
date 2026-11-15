@@ -1,33 +1,33 @@
 const steps = [
   {
     n: 1,
-    label: 'Inspectie initiala',
-    desc: 'Verificam tipul de material, structura firului si eventualele pete sau zone deteriorate inainte de a incepe procesul.',
+    label: 'Inspecție inițială',
+    desc: 'Verificăm tipul de material, structura firului și eventualele pete sau zone deteriorate înainte de a începe procesul.',
   },
   {
     n: 2,
-    label: 'Desprafuire mecanica',
-    desc: 'Eliminam praful si impuritatile grosiere cu echipamente profesionale de batere, pregatind covorul pentru spalare.',
+    label: 'Desprăfuire mecanică',
+    desc: 'Eliminăm praful și impuritățile grosiere, pregătind covorul pentru spălare.',
   },
   {
     n: 3,
-    label: 'Aspirare in profunzime',
-    desc: 'Aspiram ambele fete ale covorului pentru a elimina alergenii, acarii si particulele fine inainte de tratamentul umed.',
+    label: 'Aspirare în profunzime',
+    desc: 'Aspirăm ambele fețe ale covorului pentru a elimina praful fin înainte de tratamentul umed.',
   },
   {
     n: 4,
-    label: 'Spalare controlata',
-    desc: 'Aplicam detergenti specializati, selectati in functie de tipul de material si gradul de murdarie, pentru rezultate optime.',
+    label: 'Spălare controlată',
+    desc: 'Aplicăm detergenți aleși după material și după gradul de murdărie, fără substanțe agresive.',
   },
   {
     n: 5,
-    label: 'Stoarcere profesionala',
-    desc: 'Eliminam apa in exces cu centrifuga profesionala pentru a reduce timpul de uscare si a preveni deformarea covorului.',
+    label: 'Stoarcere',
+    desc: 'Eliminăm apa în exces prin stoarcere, ca să scurtăm uscarea și să nu rămână covorul ud.',
   },
   {
     n: 6,
-    label: 'Uscare controlata',
-    desc: 'Uscam covorul in spatiu dedicat cu dezumidificatoare si ventilatoare. Fara mirosuri neplacute, fara mucegai.',
+    label: 'Uscare controlată',
+    desc: 'Uscăm covorul în spațiu dedicat, cu dezumidificatoare și ventilatoare, ca să nu rămână miros de umezeală.',
   },
 ];
 
@@ -37,9 +37,9 @@ export default function ProcessSection() {
       <div className="container-app">
         <div className="card rounded-[32px] p-6 md:p-10 border border-white/40 bg-white/35 backdrop-blur-xl shadow-2xl">
           <div className="text-center mb-8">
-            <h2 className="section-title text-2xl md:text-3xl">Procesul nostru in 6 pasi</h2>
+            <h2 className="section-title text-2xl md:text-3xl">Procesul în 6 pași</h2>
             <p className="section-subtitle mt-2">
-              Fiecare covor parcurge acelasi process complet – fara scurtaturi, fara compromisuri
+              Fiecare covor parcurge aceiași pași. Prețul de 13 lei/mp nu taie etape.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">

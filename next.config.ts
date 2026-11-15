@@ -1,3 +1,4 @@
+// Configurare Next.js. Functii: redirects.
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -124,6 +125,41 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      // Pagini care tintesc aceeasi cautare ca homepage-ul
+      { source: '/spalatorie-covoare-brasov', destination: '/', statusCode: 301 },
+      { source: '/spalat-covoare-brasov', destination: '/', statusCode: 301 },
+      { source: '/curatare-covoare-brasov', destination: '/', statusCode: 301 },
+      { source: '/spalatorie-covoare-cu-ridicare-brasov', destination: '/', statusCode: 301 },
+      { source: '/igienizare-covoare-brasov', destination: '/', statusCode: 301 },
+      // Pagina de pret mai slaba decat /tarife
+      { source: '/pret-spalat-covoare-brasov', destination: '/tarife', statusCode: 301 },
+      // Cartiere si localitati cu continut de sablon
+      { source: '/spalatorie-covoare-tractorul', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-racadau', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-avantgarden', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-schei', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-steagu', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-strada-carpatilor', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-noua', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-gemenii', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-centru-brasov', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-grivitei', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-dupa-deal', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-timis', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-florilor', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-sacele', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-predeal', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-prejmer', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-lunca-calnicului', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-cristian', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-codlea', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-rasnov', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-harman', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-stupini', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-sanpetru', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-ghimbav', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-poiana-brasov', destination: '/zone-deservite', statusCode: 301 },
+      { source: '/spalatorie-covoare-bran', destination: '/zone-deservite', statusCode: 301 },
     ];
   },
 };

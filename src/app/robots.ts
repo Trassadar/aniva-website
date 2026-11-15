@@ -1,3 +1,6 @@
+// Functii: robots.
+// Permite CSS, JS si imaginile din /_next/. Blocheaza doar API-ul.
+
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
@@ -5,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/_next/'],
+      disallow: ['/api/'],
     },
     sitemap: 'https://www.spalatoriaaniva.ro/sitemap.xml',
   };

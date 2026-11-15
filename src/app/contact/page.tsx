@@ -7,7 +7,7 @@ import { generateMetadata } from '@/lib/seo';
 
 export const metadata = generateMetadata({
   title: 'Contact ANIVA Brasov | Spalatorie Covoare',
-  description: 'Contacteaza-ne pentru servicii de spalare covoare in Brasov. Telefon: 0759158914. Email: spalatoriaaniva@gmail.com. Adresa: Str. Soseaua Cristianului Nr.11 Brasov.',
+  description: 'Contact ANIVA, spălătorie de covoare în Brașov. Telefon: 0759158914. Email: spalatoriaaniva@gmail.com. Adresă: Șos. Cristianului nr. 11, Brașov.',
   path: '/contact',
 });
 
@@ -70,7 +70,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold mb-1 text-muted">Adresa</p>
-                      <p className="text-lg font-extrabold text-text">Str. Soseaua Cristianului Nr.11 Brasov, Romania</p>
+                      <p className="text-lg font-extrabold text-text">Șos. Cristianului nr. 11, Brașov</p>
                     </div>
                   </div>
                 </div>

@@ -68,13 +68,13 @@ export function Button({
 
   // daca exista href, randam Link (ca sa poti folosi Button ca link)
   if (href) {
-    const { onClick, ...btnRest } = rest as React.ButtonHTMLAttributes<HTMLButtonElement>;
+    const { onClick } = rest as React.ButtonHTMLAttributes<HTMLButtonElement>;
     return (
       <Link
         href={href}
         prefetch={prefetch}
         className={`${cls} ${className}`}
-        onClick={onClick as any}
+        onClick={onClick as unknown as React.MouseEventHandler<HTMLAnchorElement>}
       >
         {children}
       </Link>

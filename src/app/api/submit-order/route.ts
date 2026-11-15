@@ -88,9 +88,9 @@ export async function POST(request: NextRequest) {
     });
 
     const text = await response.text();
-    let result: any;
+    let result: { ok?: boolean; error?: string; id?: string };
     try {
-      result = JSON.parse(text);
+      result = JSON.parse(text) as { ok?: boolean; error?: string; id?: string };
     } catch {
       return NextResponse.json(
         { ok: false, error: "API a raspuns non-JSON." },
@@ -106,7 +106,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json({ ok: true, id: result.id });
-  } catch (error: any) {
+  } catch {
     return NextResponse.json(
       { ok: false, error: "Eroare interna. Te rugam sa incerci din nou." },
       { status: 500 }

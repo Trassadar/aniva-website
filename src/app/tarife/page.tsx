@@ -6,8 +6,8 @@ import { Calculator, Info } from 'lucide-react';
 import { generateMetadata } from '@/lib/seo';
 
 export const metadata = generateMetadata({
-  title: 'Tarife Spalatorie Covoare ANIVA Brasov | Preturi Transparente',
-  description: 'Tarife transparente pentru spalare covoare in Brasov. Pret 13 lei/mp (reducere de la 15 lei). Comanda minima pe zone. Festonat 13 lei/ml (reducere de la 15 lei). Vezi toate detaliile.',
+  title: 'Tarife spălare covoare Brașov | listă de prețuri, 13 lei/mp | ANIVA',
+  description: 'Lista de prețuri ANIVA: spălare covoare 13 lei/mp, redus de la 15 lei/mp. Festonat 13 lei/ml (metru liniar). Comandă minimă pe zone și exemple de calcul.',
   path: '/tarife',
 });
 
@@ -41,10 +41,12 @@ export default function Tarife() {
                 <div className="text-center mb-6">
                   <Badge variant="soft" className="text-2xl px-6 py-3 flex flex-col items-center gap-1">
                     <span className="font-bold">13 lei/mp</span>
-                    <span className="text-sm line-through opacity-60 font-normal">15 lei/mp</span>
+                    <span className="text-sm font-normal opacity-80">
+                      redus de la <del>15 lei/mp</del>
+                    </span>
                   </Badge>
                   <p className="card-muted mt-4">
-                    Pret pentru spalare si curatare covoare
+                    Spălarea se calculează la metru pătrat (mp): lungime × lățime. Un covor de 2×3 m are 6 mp.
                   </p>
                   <p className="text-xs mt-2 text-muted italic">
                     * Orice covor sub 1 mp se tarifeaza ca 1 mp
@@ -58,14 +60,14 @@ export default function Tarife() {
                       <div>
                         <p className="font-extrabold mb-2 text-text">Comanda minima pe zone:</p>
                         <div className="space-y-2 text-sm text-muted">
-                          <p>• <strong className="text-text">Brasov / Stupini / Sanpetru:</strong> 6 mp 
-                            <span className="ml-2"><span className="line-through opacity-60">90 lei</span> <strong className="text-text font-bold">78 lei</strong></span>
+                          <p>• <strong className="text-text">Brașov / Stupini / Sânpetru:</strong> 6 mp{' '}
+                            <span className="ml-2">redus de la <del>90 lei</del> <strong className="text-text font-bold">78 lei</strong></span>
                           </p>
-                          <p>• <strong className="text-text">Codlea / Sacele / Harman / Ghimbav / Cristian:</strong> 6 mp 
-                            <span className="ml-2"><span className="line-through opacity-60">90 lei</span> <strong className="text-text font-bold">78 lei</strong></span>
+                          <p>• <strong className="text-text">Codlea / Săcele / Hărman / Ghimbav / Cristian:</strong> 6 mp{' '}
+                            <span className="ml-2">redus de la <del>90 lei</del> <strong className="text-text font-bold">78 lei</strong></span>
                           </p>
-                          <p>• <strong className="text-text">Prejmer / Poiana Brasov / Bran / Sinaia / Busteni / Predeal:</strong> 25 mp 
-                            <span className="ml-2"><span className="line-through opacity-60">375 lei</span> <strong className="text-text font-bold">325 lei</strong></span>
+                          <p>• <strong className="text-text">Prejmer / Poiana Brașov / Bran / Sinaia / Bușteni / Predeal:</strong> 25 mp{' '}
+                            <span className="ml-2">redus de la <del>375 lei</del> <strong className="text-text font-bold">325 lei</strong></span>
                           </p>
                         </div>
                         <p className="text-xs mt-3 italic text-muted">
@@ -81,11 +83,13 @@ export default function Tarife() {
                   <div className="flex items-center justify-between p-4 bg-surface2 rounded-2xl ring-1 ring-border/70">
                     <div>
                       <p className="font-extrabold mb-1 text-text">Festonat covoare</p>
-                      <p className="text-sm text-muted">Reparatii si protectie</p>
+                      <p className="text-sm text-muted">Metru liniar (ml), adică lungimea conturului, nu suprafața în mp</p>
                     </div>
                     <Badge variant="soft" className="text-lg px-4 py-2 flex flex-col items-center gap-1">
                       <span className="font-bold">13 lei/ml</span>
-                      <span className="text-sm line-through opacity-60 font-normal">15 lei/ml</span>
+                      <span className="text-sm font-normal opacity-80">
+                        redus de la <del>15 lei/ml</del>
+                      </span>
                     </Badge>
                   </div>
                 </div>

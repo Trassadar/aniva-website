@@ -4,7 +4,7 @@ import { useRef, useState } from 'react';
 import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Container, Card, CardHeader, CardBody, Input, Textarea, Button } from '@/components/ui/aniva';
+import { Container, Card, CardBody, Input, Textarea, Button } from '@/components/ui/aniva';
 import { CheckCircle } from 'lucide-react';
 
 export default function ComandaOnline() {
@@ -144,9 +144,9 @@ export default function ComandaOnline() {
       });
 
       const text = await response.text();
-      let result: any;
+      let result: { ok?: boolean; error?: string; id?: string; orderId?: string };
       try {
-        result = JSON.parse(text);
+        result = JSON.parse(text) as { ok?: boolean; error?: string; id?: string; orderId?: string };
       } catch {
         setErrors({ submit: 'API a raspuns non-JSON. Verifica consola pentru detalii.' });
         return;
@@ -158,8 +158,9 @@ export default function ComandaOnline() {
         setFormData(initialFormData);
 
         // Google Ads conversion event
-        if (typeof window !== "undefined" && (window as any).gtag) {
-          (window as any).gtag('event', 'ads_conversion_Contacta_ne_1');
+        const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+        if (typeof window !== "undefined" && gtag) {
+          gtag('event', 'ads_conversion_Contacta_ne_1');
         }
       } else {
         setErrors({ submit: result.error || 'Eroare la trimiterea comenzii' });
