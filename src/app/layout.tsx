@@ -5,9 +5,9 @@ import { generateStructuredData } from "@/lib/seo";
 import Script from "next/script";
 
 export const metadata = genMeta({
-  title: "Spalatorie Covoare Brasov | Ridicare si Livrare Gratuita | 13 Lei/Mp",
+  title: "Spălătorie Covoare Brașov | 13 lei/mp, Ridicare Gratuită | ANIVA",
   description:
-    "Spalatorie profesionala de covoare in Brasov - ridicare si livrare gratuita. Servicii de calitate cu peste 4 ani de experienta. Preturi transparente: 13 lei/mp.",
+    "Spălătorie de covoare în Brașov cu ridicare și livrare gratuită. 13 lei/mp, gata în 3 zile lucrătoare. Programează online sau sună la 0759 158 914.",
 });
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const structuredData = generateStructuredData('LocalBusiness');
+  const structuredData = generateStructuredData();
 
   return (
     <html lang="ro">

@@ -4,7 +4,7 @@ import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import { CheckCircle, FileText, MapPin, Calendar, Package } from 'lucide-react';
+import { CheckCircle, FileText, MapPin, Package } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -104,10 +104,10 @@ export default function Comanda() {
       });
 
       const text = await response.text();
-      let result: any;
+      let result: { ok?: boolean; error?: string; id?: string; orderId?: string };
 
       try {
-        result = JSON.parse(text);
+        result = JSON.parse(text) as { ok?: boolean; error?: string; id?: string; orderId?: string };
       } catch {
         setSubmitError('API a raspuns non-JSON. Verificati consola pentru detalii.');
         return;
@@ -118,8 +118,9 @@ export default function Comanda() {
         setIsSubmitted(true);
 
         // Google Ads conversion event
-        if (typeof window !== "undefined" && (window as any).gtag) {
-          (window as any).gtag('event', 'ads_conversion_Contacta_ne_1');
+        const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+        if (typeof window !== "undefined" && gtag) {
+          gtag('event', 'ads_conversion_Contacta_ne_1');
         }
       } else {
         setSubmitError(result.error || 'Eroare la trimiterea comenzii');

@@ -25,10 +25,10 @@ export default function SEOPageHero({ h1, subtitle, badge }: SEOPageHeroProps) {
         </p>
         <div className="mt-8 flex flex-wrap gap-4">
           <Link href="/comanda-online" className="btn-primary btn-cta">
-            Comanda online
+            Comandă online
           </Link>
           <a href="tel:0759158914" className="btn-ghost btn-cta">
-            Suna acum – 0759 158 914
+            Sună acum – 0759 158 914
           </a>
         </div>
       </div>

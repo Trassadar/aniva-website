@@ -83,7 +83,7 @@ export async function POST(request: NextRequest) {
       ok: true,
       orderId: orderRef.id,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Eroare la crearea comenzii:', error);
     return NextResponse.json(
       { ok: false, error: 'Eroare la procesarea comenzii. Te rugam sa incerci din nou.' },

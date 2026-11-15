@@ -4,6 +4,7 @@ export const metadata = generateMetadata({
   title: 'Comanda ANIVA Brasov | Spalatorie Covoare',
   description: 'Comanda servicii de spalare covoare in Brasov. Formular simplu si rapid. Ridicare si livrare gratuita. Completeaza formularul si te vom contacta pentru confirmare.',
   path: '/comanda',
+  noIndex: true,
 });
 
 export default function ComandaLayout({

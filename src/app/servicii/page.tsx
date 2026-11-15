@@ -41,7 +41,7 @@ export default function Servicii() {
                         <h2 className="card-title">Spalare covoare</h2>
                         <Badge variant="soft" className="flex flex-col items-center">
                           <span className="font-bold">13 lei/mp</span>
-                          <span className="text-xs line-through opacity-60">15 lei/mp</span>
+                          <span className="text-xs font-normal">redus de la <del>15 lei/mp</del></span>
                         </Badge>
                       </div>
                       <p className="card-muted">
@@ -151,11 +151,11 @@ export default function Servicii() {
                         <h2 className="card-title">Reparatii & festonare</h2>
                         <Badge variant="soft" className="flex flex-col items-center">
                           <span className="font-bold">13 lei/ml</span>
-                          <span className="text-xs line-through opacity-60">15 lei/ml</span>
+                          <span className="text-xs font-normal">redus de la <del>15 lei/ml</del></span>
                         </Badge>
                       </div>
                       <p className="card-muted">
-                        Servicii de reparatii si festonare pentru covoare. Restauram si protejam covoarele tale cu atentie, prelungind durata de viata a acestora.
+                        Servicii de reparații și festonare pentru covoare, tarifate la metru liniar (ml), nu la metru pătrat. Restaurăm și protejăm covoarele cu atenție.
                       </p>
                     </div>
                   </div>

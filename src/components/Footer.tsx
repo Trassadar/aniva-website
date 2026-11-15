@@ -38,7 +38,7 @@ export default function Footer() {
                 </p>
                 <p className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-brand" />
-                  <span>Str. Soseaua Cristianului Nr.11 Brasov</span>
+                  <span>Șos. Cristianului nr. 11, Brașov</span>
                 </p>
               </div>
           </div>
@@ -51,6 +51,9 @@ export default function Footer() {
               </li>
               <li>
                   <Link href="/tarife" className="hover:opacity-80">Tarife</Link>
+              </li>
+              <li>
+                  <Link href="/zone-deservite" className="hover:opacity-80">Zone deservite</Link>
               </li>
               <li>
                   <Link href="/comanda-online" className="hover:opacity-80">Comanda online</Link>

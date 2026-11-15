@@ -3,7 +3,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import { Calculator, Ruler, CheckCircle, Sparkles } from 'lucide-react';
+import { Calculator, CheckCircle, Sparkles } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
 
