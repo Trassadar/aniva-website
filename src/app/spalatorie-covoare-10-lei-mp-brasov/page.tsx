@@ -137,6 +137,8 @@ export default function SpalatoriePretAccesibil() {
                       <span className="font-bold text-text">Festonare: 13 lei/ml</span>
                       <p className="text-sm text-muted mt-0.5">
                         Metru liniar, doar conturul. Nu se confundă cu mp. Un covor de 2×3 m are 10 ml de contur.
+                        Detaliile sunt pe pagina de{' '}
+                        <Link href="/festonare-covoare" className="underline underline-offset-4 text-text">festonare</Link>.
                       </p>
                     </div>
                     <div>
@@ -158,6 +160,8 @@ export default function SpalatoriePretAccesibil() {
                   </Link>
                   . Spălarea în sine, pașii și termenul de 3 zile lucrătoare sunt descrise pe{' '}
                   <Link href="/" className="underline underline-offset-4 text-text">pagina principală</Link>.
+                  Ghidurile practice sunt pe{' '}
+                  <Link href="/blog" className="underline underline-offset-4 text-text">blog</Link>.
                 </p>
                 <p>
                   Ca să afli totalul pentru covoarele tale, sună la{' '}

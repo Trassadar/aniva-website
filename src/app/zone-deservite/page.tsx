@@ -22,6 +22,7 @@ const brasovSix = [
   'Avantgarden',
   'Bartolomeu',
   'Centru',
+  'Centrul Civic',
   'După Deal',
   'Florilor',
   'Gemenii',
@@ -35,9 +36,17 @@ const brasovSix = [
   'Stupini',
   'Timiș',
   'Tractorul',
+  'Triaj',
 ];
 
-const nearbySix = ['Codlea', 'Cristian', 'Ghimbav', 'Hărman', 'Săcele', 'Sânpetru'];
+const nearbySix: Array<{ name: string; href?: string }> = [
+  { name: 'Codlea', href: '/spalatorie-covoare-codlea' },
+  { name: 'Cristian' },
+  { name: 'Ghimbav', href: '/spalatorie-covoare-ghimbav' },
+  { name: 'Hărman' },
+  { name: 'Săcele', href: '/spalatorie-covoare-sacele' },
+  { name: 'Sânpetru' },
+];
 
 const farTwentyFive = ['Bran', 'Bușteni', 'Poiana Brașov', 'Predeal', 'Prejmer', 'Sinaia'];
 
@@ -48,9 +57,9 @@ const faqs = [
       'Nu. Spălarea covoarelor este 13 lei/mp peste tot. Se schimbă doar comanda minimă: 6 mp (78 lei) în Brașov și în localitățile apropiate, 25 mp (325 lei) pe rutele mai lungi.',
   },
   {
-    question: 'De ce Bartolomeu și Astra au pagină separată?',
+    question: 'De ce unele zone au pagină separată?',
     answer:
-      'Sunt două cartiere din care primim comenzi în mod constant și unde ridicarea arată diferit: Bartolomeu este în nord-vest, spre Ghimbav, cu blocuri și case; Astra este în sud, spre Săcele, mai ales blocuri. Celelalte cartiere sunt acoperite de pe această pagină, la același preț și același minim de 6 mp.',
+      'Bartolomeu și Astra au pagină pentru că de acolo vin cereri constant și ridicarea arată diferit. Săcele, Codlea, Ghimbav și Râșnov au pagini proprii pentru că sunt localități, nu cartiere din Brașov. Celelalte cartiere rămân pe această pagină, la același preț și același minim de 6 mp.',
   },
   {
     question: 'Care este minimul pentru Râșnov?',
@@ -65,7 +74,7 @@ const faqs = [
   {
     question: 'Trebuie să aduc eu covorul la atelier?',
     answer:
-      'Nu. Ridicăm de la adresă și îl aducem înapoi, gratuit, dacă este atins minimul. Atelierul este pe Șos. Cristianului nr. 11, Brașov. Poți și să îl aduci tu, în program: luni–vineri 08:00–17:00, sâmbătă 08:00–13:00. Duminica este închis.',
+      'Nu. Nu primim covoare la sediu. Preluăm doar de la domiciliu, cu ridicare și livrare gratuită, dacă este atins minimul. Atelierul este pe Șos. Cristianului nr. 11, Brașov. Programul de programări este luni–vineri 08:00–17:00, sâmbătă 08:00–13:00. Duminica este închis.',
   },
 ];
 
@@ -100,7 +109,7 @@ export default function ZoneDeservite() {
             <div className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-[32px] p-6 md:p-10 shadow-xl">
               <h2 className="font-extrabold text-text text-2xl">Brașov, minim 6 mp (78 lei)</h2>
               <p className="mt-3 text-muted leading-relaxed">
-                Include cartierele de mai jos. Două dintre ele au pagină
+                Include cartierele de mai jos, la minim 6 mp. Bartolomeu și Astra au pagină
                 proprie, cu detalii de ridicare:{' '}
                 <Link href="/spalatorie-covoare-bartolomeu" className="underline underline-offset-4 text-text font-semibold">
                   Bartolomeu
@@ -139,12 +148,18 @@ export default function ZoneDeservite() {
                 împreună cu Brașov și Stupini; Codlea, Săcele, Hărman, Ghimbav și Cristian au același minim.
               </p>
               <ul className="mt-4 flex flex-wrap gap-2">
-                {nearbySix.map((name) => (
+                {nearbySix.map((item) => (
                   <li
-                    key={name}
+                    key={item.name}
                     className="inline-flex items-center px-4 py-2 rounded-full bg-white/55 border border-white/65 text-sm font-semibold text-text"
                   >
-                    {name}
+                    {item.href ? (
+                      <Link href={item.href} className="underline underline-offset-4">
+                        {item.name}
+                      </Link>
+                    ) : (
+                      item.name
+                    )}
                   </li>
                 ))}
               </ul>
@@ -171,7 +186,11 @@ export default function ZoneDeservite() {
             <div className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-[32px] p-6 md:p-10 shadow-xl">
               <h2 className="font-extrabold text-text text-2xl">Râșnov</h2>
               <p className="mt-3 text-muted leading-relaxed">
-                Ridicăm și din Râșnov. Minimul pentru Râșnov nu este scris separat pe{' '}
+                Ridicăm și din Râșnov. Detaliile de drum sunt pe pagina{' '}
+                <Link href="/spalatorie-covoare-rasnov" className="underline underline-offset-4 text-text">
+                  spălătorie covoare Râșnov
+                </Link>
+                . Minimul pentru Râșnov nu este scris separat pe{' '}
                 <Link href="/tarife" className="underline underline-offset-4 text-text">pagina de tarife</Link>,
                 așa că îl confirmăm când lași comanda, înainte să pornim. Nu publicăm aici o cifră pe care grila oficială nu o are.
               </p>

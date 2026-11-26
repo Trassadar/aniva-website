@@ -59,12 +59,8 @@ const nextConfig: NextConfig = {
         destination: '/contact',
         permanent: true,
       },
-      // Redirects pentru blog/articole (daca existau)
-      {
-        source: '/blog/:slug*',
-        destination: '/',
-        permanent: true,
-      },
+      // /blog este sectiunea noua. Nu mai redirectam /blog, ca sa nu inghita articolele.
+      // Articolele vechi WordPress, daca existau sub /articole, raman redirectate mai jos.
       {
         source: '/articole/:slug*',
         destination: '/',
@@ -147,17 +143,15 @@ const nextConfig: NextConfig = {
       { source: '/spalatorie-covoare-dupa-deal', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-timis', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-florilor', destination: '/zone-deservite', statusCode: 301 },
-      { source: '/spalatorie-covoare-sacele', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-predeal', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-prejmer', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-lunca-calnicului', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-cristian', destination: '/zone-deservite', statusCode: 301 },
-      { source: '/spalatorie-covoare-codlea', destination: '/zone-deservite', statusCode: 301 },
-      { source: '/spalatorie-covoare-rasnov', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-harman', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-stupini', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-sanpetru', destination: '/zone-deservite', statusCode: 301 },
-      { source: '/spalatorie-covoare-ghimbav', destination: '/zone-deservite', statusCode: 301 },
+      // Sacele, Codlea, Ghimbav si Rasnov au pagini proprii.
+      // Redirectul /spalatorie-covoare-brasov -> / ramane mai sus.
       { source: '/spalatorie-covoare-poiana-brasov', destination: '/zone-deservite', statusCode: 301 },
       { source: '/spalatorie-covoare-bran', destination: '/zone-deservite', statusCode: 301 },
     ];

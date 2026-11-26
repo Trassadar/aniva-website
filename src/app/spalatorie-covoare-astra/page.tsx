@@ -72,7 +72,7 @@ export default function SpalatorieAstra() {
                 </p>
                 <p>
                   Pentru că Astra este în Brașov, minimul este <strong className="text-text">6 mp (78 lei)</strong>.
-                  Săcele, care începe imediat după cartier, are același
+                  <Link href="/spalatorie-covoare-sacele" className="underline underline-offset-4 text-text">Săcele</Link>, care începe imediat după cartier, are același
                   minim de 6 mp. Dacă nu ești sigur dacă adresa este în Astra sau deja în Săcele, prețul pe metru
                   pătrat nu se schimbă: spălarea este 13 lei/mp.
                 </p>

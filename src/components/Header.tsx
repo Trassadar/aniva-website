@@ -68,10 +68,11 @@ export default function Header() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link href="/" className="header-logo flex items-center">
             <Image
-              src="/images/logo.png"
-              alt="ANIVA"
+              src="/images/logo.webp"
+              alt="Logo ANIVA, spălătorie de covoare în Brașov"
               width={400}
               height={120}
+              quality={90}
               priority
               className="h-20 w-auto select-none"
               sizes="(max-width: 640px) 260px, 400px"
@@ -97,6 +98,12 @@ export default function Header() {
               className="text-sm font-semibold text-[rgba(27,20,16,0.8)] hover:text-[rgba(27,20,16,1)] transition"
             >
               Zone
+            </Link>
+            <Link
+              href="/blog"
+              className="text-sm font-semibold text-[rgba(27,20,16,0.8)] hover:text-[rgba(27,20,16,1)] transition"
+            >
+              Blog
             </Link>
             <Link
               href="/contact"
@@ -155,6 +162,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Zone
+              </Link>
+              <Link
+                href="/blog"
+                className="py-2 text-sm font-semibold text-[rgba(27,20,16,0.8)] hover:text-[rgba(27,20,16,1)] transition"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
               </Link>
               <Link
                 href="/contact"

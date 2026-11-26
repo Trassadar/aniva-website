@@ -125,7 +125,7 @@ body {
   position: absolute;
   inset: -3%;
   z-index: 0;
-  background-image: url("/hero-bg.jpg");
+  background-image: url("/hero-bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;

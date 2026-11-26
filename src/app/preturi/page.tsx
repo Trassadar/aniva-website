@@ -209,7 +209,7 @@ export default function Preturi() {
                   </div>
                   <div className="flex justify-between items-center py-4">
                     <span className="text-primary font-medium text-lg">Timp livrare</span>
-                    <span className="text-secondary text-lg">24-48 ore</span>
+                    <span className="text-secondary text-lg">3 zile lucrătoare</span>
                   </div>
                 </div>
               </motion.div>
