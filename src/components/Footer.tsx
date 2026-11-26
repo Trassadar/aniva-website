@@ -12,10 +12,11 @@ export default function Footer() {
           <div>
               <div className="mb-4">
                 <Image
-                  src="/images/logo.png"
-                  alt="ANIVA"
+                  src="/images/logo.webp"
+                  alt="Logo ANIVA, spălătorie de covoare în Brașov"
                   width={280}
                   height={84}
+                  quality={90}
                   className="h-14 w-auto"
                   sizes="280px"
                 />
@@ -54,6 +55,27 @@ export default function Footer() {
               </li>
               <li>
                   <Link href="/zone-deservite" className="hover:opacity-80">Zone deservite</Link>
+              </li>
+              <li>
+                  <Link href="/festonare-covoare" className="hover:opacity-80">Festonare</Link>
+              </li>
+              <li>
+                  <Link href="/blog" className="hover:opacity-80">Blog</Link>
+              </li>
+              <li>
+                  <Link href="/spalatorie-covoare-sacele" className="hover:opacity-80">Săcele</Link>
+              </li>
+              <li>
+                  <Link href="/spalatorie-covoare-codlea" className="hover:opacity-80">Codlea</Link>
+              </li>
+              <li>
+                  <Link href="/spalatorie-covoare-ghimbav" className="hover:opacity-80">Ghimbav</Link>
+              </li>
+              <li>
+                  <Link href="/spalatorie-covoare-rasnov" className="hover:opacity-80">Râșnov</Link>
+              </li>
+              <li>
+                  <Link href="/spalatorie-covoare-10-lei-mp-brasov" className="hover:opacity-80">Spălare, 13 lei/mp</Link>
               </li>
               <li>
                   <Link href="/comanda-online" className="hover:opacity-80">Comanda online</Link>

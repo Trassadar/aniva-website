@@ -5,9 +5,9 @@ import { generateStructuredData } from "@/lib/seo";
 import Script from "next/script";
 
 export const metadata = genMeta({
-  title: "Spălătorie Covoare Brașov | 13 lei/mp, Ridicare Gratuită | ANIVA",
+  title: "Spălătorie covoare Brașov | Ridicare de acasă, 13 lei/mp",
   description:
-    "Spălătorie de covoare în Brașov cu ridicare și livrare gratuită. 13 lei/mp, gata în 3 zile lucrătoare. Programează online sau sună la 0759 158 914.",
+    "Ridicăm covorul de la domiciliu în Brașov și ți-l aducem spălat și uscat. 13 lei/mp, minim 6 mp (78 lei), în 3 zile lucrătoare. Sună: 0759 158 914.",
 });
 
 export default function RootLayout({
@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="ro">
       <head>
+        <link rel="preload" as="image" href="/hero-bg.webp" type="image/webp" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16827353580"
           strategy="afterInteractive"

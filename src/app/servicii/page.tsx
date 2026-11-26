@@ -178,8 +178,8 @@ export default function Servicii() {
                       </li>
                     </ul>
                   </div>
-                  <Button variant="primary" href="/contact" className="btn-cta">
-                    Contactează-ne
+                  <Button variant="primary" href="/festonare-covoare" className="btn-cta">
+                    Vezi festonarea
                   </Button>
                 </CardBody>
               </Card>

@@ -210,7 +210,7 @@ export default function Comanda() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-gold shrink-0 mt-1" />
-                      <span>Covoarele sunt returnate curate in 24-48 ore</span>
+                      <span>Covoarele sunt aduse înapoi în termenul obișnuit de 3 zile lucrătoare</span>
                     </li>
                   </ul>
                 </div>

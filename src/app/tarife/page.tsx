@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Container, Card, CardHeader, CardBody, Badge, Button } from '@/components/ui/aniva';
@@ -80,6 +81,14 @@ export default function Tarife() {
                       <span className="font-bold">13 lei/ml</span>
                     </Badge>
                   </div>
+                  <p className="text-sm text-muted">
+                    Cum se măsoară conturul este pe pagina de{' '}
+                    <Link href="/festonare-covoare" className="underline underline-offset-4 text-text">festonare</Link>.
+                    Spălarea la 13 lei/mp este explicată și pe{' '}
+                    <Link href="/spalatorie-covoare-10-lei-mp-brasov" className="underline underline-offset-4 text-text">pagina de preț</Link>.
+                    Zonele, inclusiv Săcele, Codlea, Ghimbav și Râșnov, sunt la{' '}
+                    <Link href="/zone-deservite" className="underline underline-offset-4 text-text">zone deservite</Link>.
+                  </p>
                 </div>
               </CardBody>
             </Card>

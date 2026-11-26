@@ -18,19 +18,18 @@ const heroTitleWords = [
   "covoare",
   "Brașov",
   "–",
-  "spălare",
-  "profesională",
-  "cu",
   "ridicare",
-  "și",
-  "livrare",
-  "gratuită",
+  "de",
+  "la",
+  "domiciliu,",
+  "13",
+  "lei/mp",
 ];
 
 export const metadata = genMeta({
-  title: "Spălătorie Covoare Brașov | 13 lei/mp, Ridicare Gratuită | ANIVA",
+  title: "Spălătorie covoare Brașov | Ridicare de acasă, 13 lei/mp",
   description:
-    "Spălătorie de covoare în Brașov cu ridicare și livrare gratuită. 13 lei/mp, gata în 3 zile lucrătoare. Programează online sau sună la 0759 158 914.",
+    "Ridicăm covorul de la domiciliu în Brașov și ți-l aducem spălat și uscat. 13 lei/mp, minim 6 mp (78 lei), în 3 zile lucrătoare. Sună: 0759 158 914.",
   path: "",
 });
 
@@ -49,6 +48,26 @@ const homeFaqs = [
     question: "În cât timp primesc covorul înapoi?",
     answer:
       "Termenul obișnuit este de 3 zile lucrătoare de la ridicare. Te anunțăm înainte de livrare, ca să fii acasă. Programul atelierului este luni–vineri 08:00–17:00 și sâmbătă 08:00–13:00. Duminica este închis.",
+  },
+  {
+    question: "Scoateți petele de vin, cafea sau noroi?",
+    answer:
+      "La inspecție vedem pata și materialul. Spălarea controlată curăță murdăria din fibră, dar o pată veche poate lăsa o umbră. Nu promitem că dispare orice pată. Dacă pata este proaspătă, tamponeaz-o fără să freci. Ghidul pentru vin este pe blog. Festonarea marginii, dacă e nevoie, este separată: 13 lei/ml.",
+  },
+  {
+    question: "Ce faceți cu mirosul de animale?",
+    answer:
+      "Mirosul de urină stă de obicei în dosul covorului. Aspirarea, spălarea, stoarcerea și uscarea cu dezumidificatoare scot umezeala care îl ține. Dacă mirosul este foarte vechi, îți spunem la inspecție cât se poate curăța, înainte de spălare. Nu folosim substanțe agresive.",
+  },
+  {
+    question: "Spălați covoare din lână, mătase sau shaggy?",
+    answer:
+      "Da, dacă se pot ridica. Detergentul se alege după fibră: lâna și mătasea nu se spală ca un covor sintetic. Shaggy-ul are fir lung și are nevoie de desprăfuire înainte de apă. Prețul rămâne 13 lei/mp. Mocheta fixă nu intră la acest tarif; se face la cerere.",
+  },
+  {
+    question: "Din ce cartiere și localități ridicați?",
+    answer:
+      "În Brașov, inclusiv Tractorul, Astra, Răcădău, Noua, Centrul Civic, Bartolomeu, Triaj, Florilor și Schei, minimul este 6 mp. Același minim este în Săcele, Ghimbav, Codlea, Cristian, Sânpetru și Hărman. La Prejmer, Poiana Brașov, Bran, Sinaia, Bușteni și Predeal minimul este 25 mp. Pentru Râșnov confirmăm minimul la comandă. Lista este pe pagina de zone.",
   },
   {
     question: "Mai există prețul de 10 lei/mp?",
@@ -128,10 +147,12 @@ function ProcessWithImages() {
               <div className="img-zoom relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
                 <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent z-10" />
                 <Image
-                  src="/images/Transport-aniva.png"
-                  alt="Ridicare și livrare gratuită în Brașov"
-                  width={1200}
-                  height={800}
+                  src="/images/transport-aniva.webp"
+                  alt="Ridicare de covoare de la domiciliu, cu dubița ANIVA în Brașov"
+                  width={1536}
+                  height={1024}
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  quality={82}
                   className="h-[220px] w-full object-cover"
                 />
                 <div className="absolute bottom-3 left-3 right-3 z-20">
@@ -145,10 +166,12 @@ function ProcessWithImages() {
               <div className="img-zoom relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
                 <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent z-10" />
                 <Image
-                  src="/images/curatare-sigura-copii.jpg.png"
-                  alt="Spălare fără substanțe agresive, potrivită pentru case cu copii și animale"
-                  width={1200}
-                  height={800}
+                  src="/images/curatare-sigura-copii.webp"
+                  alt="Spălare de covoare fără substanțe agresive, potrivită pentru case cu copii și animale"
+                  width={1536}
+                  height={1024}
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  quality={82}
                   className="h-[220px] w-full object-cover"
                 />
                 <div className="absolute bottom-3 left-3 right-3 z-20">
@@ -334,11 +357,74 @@ function WhyAniva() {
   );
 }
 
+function MaterialeSiPete() {
+  return (
+    <section className="mt-10 md:mt-16">
+      <div className="container-app">
+        <div className="border border-white/40 bg-white/35 backdrop-blur-xl rounded-[32px] p-6 md:p-10 shadow-xl">
+          <h2 className="section-title text-2xl md:text-3xl">Lână, mătase, shaggy sau mochetă</h2>
+          <div className="mt-4 max-w-3xl space-y-4 text-sm md:text-base text-muted leading-relaxed">
+            <p>
+              Covorul se spală în atelier, nu pe loc în casă. La inspecție notăm fibra: lână, mătase, fir lung (shaggy) sau sintetic. Detergentul se alege după material. Lâna nu se spală ca un covor din polipropilenă: apa fierbinte și frecarea o pot pâsli. Mătasea este mai sensibilă, așa că ne spui din start dacă modelul are fire de mătase sau franjuri subțiri. Shaggy-ul ține nisip și păr în firul lung, de aceea desprăfuirea vine înainte de apă.
+            </p>
+            <p>
+              Mocheta lipită sau prinsă în cuie nu se rulează și nu intră la 13 lei/mp. Pentru ea există{' '}
+              <Link href="/curatare-mocheta-brasov" className="underline underline-offset-4 text-text font-semibold">
+                curățare la cerere
+              </Link>
+              , cu preț după material. Covorul care se poate ridica, din lână sau shaggy, rămâne la tariful de spălare.
+            </p>
+            <p>
+              Petele de vin, cafea, noroi sau grăsime se văd la inspecție. Nu promitem că orice pată veche dispare. Ce facem este spălarea controlată, fără substanțe agresive. Dacă pata este proaspătă, pe blog este{' '}
+              <Link href="/blog/pete-de-vin-pe-covor" className="underline underline-offset-4 text-text font-semibold">
+                un ghid pentru vin
+              </Link>
+              : tamponezi, nu freci. Mirosul de animale vine de obicei din dosul covorului. Stoarcerea și uscarea cu dezumidificatoare scot umezeala care îl ține. Dacă mirosul este foarte vechi, spunem la inspecție ce se poate curăța.
+            </p>
+            <p>
+              Cine caută o curățătorie de covoare în Brașov, sau se întreabă care este cea mai bună spălătorie de covoare din Brașov, se uită de obicei la trei lucruri: prețul spus dinainte, ridicarea de la domiciliu și un covor care se întoarce uscat. La ANIVA spălatul covoarelor este 13 lei/mp, comanda minimă în oraș este 6 mp (78 lei), iar termenul obișnuit este de 3 zile lucrătoare. Curățatul covoarelor include desprăfuirea și uscarea. Diferența dintre lână și sintetic este în{' '}
+              <Link href="/blog/covoare-din-lana-sau-sintetice" className="underline underline-offset-4 text-text font-semibold">
+                ghidul de pe blog
+              </Link>
+              , iar marginea desfăcută se{' '}
+              <Link href="/festonare-covoare" className="underline underline-offset-4 text-text font-semibold">
+                festonează la 13 lei/ml
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ZonesServed() {
+  const cartiere = [
+    { label: "Tractorul" },
+    { label: "Astra", href: "/spalatorie-covoare-astra" },
+    { label: "Răcădău" },
+    { label: "Noua" },
+    { label: "Centrul Civic" },
+    { label: "Bartolomeu", href: "/spalatorie-covoare-bartolomeu" },
+    { label: "Triaj" },
+    { label: "Florilor" },
+    { label: "Schei" },
+  ];
+  const localitati = [
+    { label: "Săcele · 6 mp", href: "/spalatorie-covoare-sacele" },
+    { label: "Ghimbav · 6 mp", href: "/spalatorie-covoare-ghimbav" },
+    { label: "Codlea · 6 mp", href: "/spalatorie-covoare-codlea" },
+    { label: "Cristian · 6 mp" },
+    { label: "Sânpetru · 6 mp" },
+    { label: "Hărman · 6 mp" },
+    { label: "Râșnov · minim la comandă", href: "/spalatorie-covoare-rasnov" },
+    { label: "Prejmer · 25 mp" },
+  ];
   const links = [
     { href: "/zone-deservite", label: "Toate zonele deservite" },
-    { href: "/spalatorie-covoare-bartolomeu", label: "Bartolomeu" },
-    { href: "/spalatorie-covoare-astra", label: "Astra" },
+    { href: "/festonare-covoare", label: "Festonare, 13 lei/ml" },
+    { href: "/blog", label: "Ghiduri pentru covoare" },
     { href: "/spalatorie-covoare-10-lei-mp-brasov", label: "Spălare covoare: 13 lei/mp" },
     { href: "/tarife", label: "Listă de tarife" },
     { href: "/curatare-canapele-brasov", label: "Curățare canapele" },
@@ -353,21 +439,43 @@ function ZonesServed() {
           <h2 className="section-title text-2xl md:text-3xl">Unde ridicăm covoarele</h2>
           <div className="mt-4 max-w-3xl space-y-4 text-sm md:text-base text-muted leading-relaxed">
             <p>
-              Ridicăm din Brașov și din localitățile din jur. În oraș, inclusiv în Bartolomeu, Astra, Tractorul, Schei, Noua, Centru și celelalte cartiere, comanda minimă este 6 mp. Același minim de 6 mp este valabil în Săcele, Codlea, Ghimbav, Hărman, Cristian, Stupini și Sânpetru.
+              Ridicăm din Brașov și din localitățile din jur. În oraș comanda minimă este 6 mp (78 lei), inclusiv în cartierele de mai jos și în restul orașului (Centru, Stupini, Avantgarden și celelalte). Nu primim covoare la sediu: venim la adresă.
             </p>
+            <ul className="flex flex-wrap gap-2">
+              {cartiere.map((item) => (
+                <li key={item.label}>
+                  {item.href ? (
+                    <Link href={item.href} className="inline-flex px-4 py-2 rounded-full bg-white/70 border border-white/70 text-sm font-semibold text-text underline underline-offset-4">
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <span className="inline-flex px-4 py-2 rounded-full bg-white/55 border border-white/65 text-sm font-semibold text-text">
+                      {item.label}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
             <p>
-              Pentru Prejmer, Poiana Brașov, Bran, Sinaia, Bușteni și Predeal, minimul este 25 mp, pentru că drumul este mai lung. Prețul pe metru pătrat rămâne 13 lei. Râșnov este în aria de ridicare; minimul pentru Râșnov se confirmă la comandă, pentru că nu este publicat separat în grila de tarife.
+              În Săcele, Ghimbav, Codlea, Cristian, Sânpetru și Hărman minimul este tot 6 mp. La Prejmer, Poiana Brașov, Bran, Sinaia, Bușteni și Predeal minimul este 25 mp (325 lei), pentru că drumul este mai lung. Prețul pe metru pătrat rămâne 13 lei. Pentru Râșnov confirmăm minimul la comandă: nu este publicat separat în grila de tarife.
             </p>
+            <ul className="flex flex-wrap gap-2">
+              {localitati.map((item) => (
+                <li key={item.label}>
+                  {item.href ? (
+                    <Link href={item.href} className="inline-flex px-4 py-2 rounded-full bg-white/70 border border-white/70 text-sm font-semibold text-text underline underline-offset-4">
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <span className="inline-flex px-4 py-2 rounded-full bg-white/55 border border-white/65 text-sm font-semibold text-text">
+                      {item.label}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
             <p>
-              Două cartiere au pagină proprie, pentru că de acolo avem cereri în mod constant:{" "}
-              <Link href="/spalatorie-covoare-bartolomeu" className="underline underline-offset-4 text-text font-semibold">
-                Bartolomeu
-              </Link>
-              , în nord-vest, spre Ghimbav, și{" "}
-              <Link href="/spalatorie-covoare-astra" className="underline underline-offset-4 text-text font-semibold">
-                Astra
-              </Link>
-              , în sud, spre Săcele. Restul zonelor sunt adunate pe pagina{" "}
+              Paginile de localitate explică drumul, nu un alt preț. Restul cartierelor sunt adunate la{" "}
               <Link href="/zone-deservite" className="underline underline-offset-4 text-text font-semibold">
                 Zone deservite
               </Link>
@@ -446,10 +554,12 @@ function QuickPricing() {
             <div className="img-zoom relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
               <div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent z-10" />
               <Image
-                src="/images/extra-ambient.jpg.png"
-                alt="Covoare rulate în atelierul ANIVA"
-                width={1200}
-                height={900}
+                src="/images/extra-ambient.webp"
+                alt="Covoare rulate în atelierul ANIVA din Brașov, pregătite de spălare"
+                width={1536}
+                height={1024}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={82}
                 className="h-[320px] w-full object-cover"
               />
               <div className="absolute bottom-4 left-4 right-4 z-20 text-white">
@@ -517,11 +627,11 @@ function CTA() {
             <div className="img-zoom relative overflow-hidden rounded-[24px] border border-white/40 shadow-xl">
               <div className="relative h-[300px] w-full">
                 <Image
-                  src="/images/ridicare.png"
-                  alt="Ridicare și livrare ANIVA"
+                  src="/images/ridicare.webp"
+                  alt="Livrarea unui covor spălat, ridicat de la domiciliu în Brașov"
                   fill
-                  priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={82}
                   className="object-cover object-center"
                 />
               </div>
@@ -607,6 +717,7 @@ export default function Home() {
       <HowItWorks />
       <PriceCalculatorSection />
       <ProcessExplained />
+      <MaterialeSiPete />
       <ServicesGrid />
       <WhyAniva />
       <ZonesServed />
@@ -621,10 +732,11 @@ export default function Home() {
               <div>
                 <div>
                   <Image
-                    src="/images/logo.png"
-                    alt="ANIVA"
+                    src="/images/logo.webp"
+                    alt="Logo ANIVA, spălătorie de covoare în Brașov"
                     width={280}
                     height={84}
+                    quality={90}
                     className="h-14 w-auto"
                     sizes="280px"
                   />
@@ -668,11 +780,32 @@ export default function Home() {
                   <Link className="footer-link" href="/zone-deservite">
                     Zone deservite
                   </Link>
+                  <Link className="footer-link" href="/festonare-covoare">
+                    Festonare
+                  </Link>
+                  <Link className="footer-link" href="/blog">
+                    Blog
+                  </Link>
+                  <Link className="footer-link" href="/spalatorie-covoare-sacele">
+                    Săcele
+                  </Link>
+                  <Link className="footer-link" href="/spalatorie-covoare-codlea">
+                    Codlea
+                  </Link>
+                  <Link className="footer-link" href="/spalatorie-covoare-ghimbav">
+                    Ghimbav
+                  </Link>
+                  <Link className="footer-link" href="/spalatorie-covoare-rasnov">
+                    Râșnov
+                  </Link>
                   <Link className="footer-link" href="/spalatorie-covoare-bartolomeu">
                     Bartolomeu
                   </Link>
                   <Link className="footer-link" href="/spalatorie-covoare-astra">
                     Astra
+                  </Link>
+                  <Link className="footer-link" href="/spalatorie-covoare-10-lei-mp-brasov">
+                    Spălare, 13 lei/mp
                   </Link>
                   <Link className="footer-link" href="/comanda-online">
                     Comandă online

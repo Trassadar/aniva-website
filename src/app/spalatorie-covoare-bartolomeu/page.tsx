@@ -91,14 +91,16 @@ export default function SpalatorieBartolomeu() {
                   oprească corect. Telefonul din comandă trebuie să răspundă în ziua ridicării.
                 </p>
                 <p>
-                  Festonatul, dacă marginea este desfăcută, nu intră în cei 13 lei/mp. Se măsoară
+                  <Link href="/festonare-covoare" className="underline underline-offset-4 text-text">Festonatul</Link>, dacă marginea este desfăcută, nu intră în cei 13 lei/mp. Se măsoară
                   pe contur, la <strong className="text-text">13 lei/ml</strong>. Îl confirmăm
                   separat, înainte să îl facem. Pașii de spălare — inspecție, desprăfuire, aspirare,
                   spălare, stoarcere, uscare controlată — sunt aceiași ca pentru restul Brașovului
                   și sunt descriși pe <Link href="/" className="underline underline-offset-4 text-text">pagina principală</Link>.
                 </p>
                 <p>
-                  Dacă ești la limita cu Ghimbav, minimul rămâne 6 mp. Toate localitățile și
+                  Dacă ești la limita cu{' '}
+                  <Link href="/spalatorie-covoare-ghimbav" className="underline underline-offset-4 text-text">Ghimbav</Link>,
+                  minimul rămâne 6 mp. Toate localitățile și
                   cartierele, inclusiv cele fără pagină proprie, sunt pe{' '}
                   <Link href="/zone-deservite" className="underline underline-offset-4 text-text">Zone deservite</Link>.
                   Pentru sudul orașului, spre Săcele, vezi pagina de{' '}

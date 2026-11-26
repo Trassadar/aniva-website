@@ -1,7 +1,9 @@
 // Functii: generateMetadata, generateStructuredData.
 // Schema DryCleaningOrLaundry (subtip de LocalBusiness), cu NAP real, fara aggregateRating.
+// Coordonate pentru Sos. Cristianului nr. 11 (punct publicat pentru aceasta adresa).
+// Cod postal 500052: segmentul strazii din Bartolomeu, OpenStreetMap.
+// Nu exista URL de profil Google sau retele sociale in repo, deci nu punem sameAs.
 // TODO: nu exista in repo o fotografie reala 1200x630. Logo-ul are 1536x1024.
-// Imaginile 1536x1024 din public/images sunt generate, iar 18958.jpg este un screenshot.
 // Inlocuieste defaultImage cu public/images/og-aniva.jpg cand exista o poza reala de atelier.
 
 import { Metadata } from 'next';
@@ -9,8 +11,8 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.spalatoriaaniva.ro';
 const siteName = 'ANIVA - Spălătorie Covoare Brașov';
 const defaultDescription =
-  'Spălătorie de covoare în Brașov, cu ridicare și livrare gratuită. 13 lei/mp, gata în 3 zile lucrătoare.';
-const defaultImage = '/images/logo-aniva.png';
+  'Spălătorie de covoare în Brașov, cu ridicare de la domiciliu. 13 lei/mp, minim 6 mp, gata în 3 zile lucrătoare.';
+const defaultImage = '/images/logo-aniva.webp';
 const defaultImageWidth = 1536;
 const defaultImageHeight = 1024;
 
@@ -74,8 +76,8 @@ export function generateStructuredData() {
     name: 'ANIVA – Spălătorie Covoare Brașov',
     description: defaultDescription,
     url: baseUrl,
-    logo: `${baseUrl}/images/logo-aniva.png`,
-    image: `${baseUrl}/images/logo-aniva.png`,
+    logo: `${baseUrl}/images/logo-aniva.webp`,
+    image: `${baseUrl}/images/logo-aniva.webp`,
     telephone: '+40759158914',
     email: 'spalatoriaaniva@gmail.com',
     address: {
@@ -83,9 +85,17 @@ export function generateStructuredData() {
       streetAddress: 'Șos. Cristianului nr. 11',
       addressLocality: 'Brașov',
       addressRegion: 'Brașov',
+      postalCode: '500052',
       addressCountry: 'RO',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 45.65579,
+      longitude: 25.557312,
+    },
+    hasMap: 'https://www.google.com/maps/search/?api=1&query=Soseaua+Cristianului+11,+Brasov',
     priceRange: '13 lei/mp',
+    openingHours: ['Mo-Fr 08:00-17:00', 'Sa 08:00-13:00'],
     areaServed: [
       'Brașov',
       'Săcele',
@@ -101,7 +111,10 @@ export function generateStructuredData() {
       'Predeal',
       'Sinaia',
       'Bușteni',
-    ],
+    ].map((name) => ({
+      '@type': name === 'Poiana Brașov' ? 'Place' : 'City',
+      name,
+    })),
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
